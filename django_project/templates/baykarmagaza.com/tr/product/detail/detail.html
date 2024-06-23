@@ -1,0 +1,570 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NPCVHED5XM"></script>
+<script>
+    {% block script %}{% endblock script %}
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NPCVHED5XM');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    
+    <title> {% block title %} Baykar Mağaza | Ürün Detay {% endblock title %} </title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="1984’ten bu yana Türkiye’nin teknolojik olarak bağımsızlaşması amacıyla yerli ve milli üretimden yana çalışan Baykar, geçtiğimiz 35 yıl içinde Türkiye’de savunma ve havacılık alanında dönüşüm yaratacak bir ivmenin öncüsü haline geldi. Bugün Baykar olarak, otomotiv endüstrisi için adım attığımız mühendislik girişimimizi yeni kuşak mühendislerimizle gökyüzüne taşıyarak dünyanın sayılı insansız hava aracı üreticilerinden biri olmanın gururunu taşıyoruz. Türkiye’nin ilk yerli ve milli İnsansız Hava Araçlarını üretirken en önemli motivasyonumuz her zaman kendi mühendislerimize ve beyin gücümüze güvenmek oldu. 
+
+Baykar’ın Türk Silahlı Kuvvetleri’nin envanterine giren ve yurt dışına ihraç edilen savunma teknolojilerinin başarısında da sürekli üretim ve geliştirme kültürü öncü rol oynuyor. Sanayi ve Teknoloji Bakanlığı’ndan tescilli Baykar Ar-Ge Merkezi’mizde havacılık arenasında paradigma dönüşümü sağlayacak ileri teknolojileri milli ve özgün olarak tasarlamaya odaklanıyoruz. Sonuç odaklı düşünen ve motivasyonu yüksek ekip ruhumuz; Ar-Ge ve üretim süreçlerinin iç içe geçmesiyle yeni teknolojilerin dinamik bir şekilde uygulanmasını sağlıyor. Tasarlamak, yapmak ve üretmek kadar; askeriyle, sanayicisiyle ve toplumun tüm katmanları tarafından insansız ve otonom teknolojilerin sahiplenilmesi için çalışmalarımızı sürdürüyoruz. 
+
+Kendi finanse ettiği Ar-Ge faaliyetleriyle Türk havacılık ve savunma tarihinde ilklere imza atan ve Türkiye’de %93 yerlilik oranına ulaşan Baykar, İnsansız Hava Araçları alanında  dünya çapında en ileri teknolojik sistemleri geliştirmeye devam etmektedir.">
+    <meta name="author" content="Baykar Mağaza">
+
+
+    <link rel="icon" type="image/x-icon" href="{% static 'cdn.baykarmagaza.com/media/uploads/2024/01/15/vruDUNOsqH2fRBLkopqojjoIgw3gA7Uv.png' %}">
+    <title>Baykar Mağaza</title>
+
+    <link rel="stylesheet" href="{% static 'cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.css' %}"
+          integrity="sha512-EDXaYrpumQKF+Ic8nuEsgJWBwMOhgwWvNINclFu91nx5VR4MeZ5xlUvyRaYQJTMImwbXSeDjtZMtTs8EB65Z0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="{% static 'cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' %}"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="{% static 'cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.27/sweetalert2.min.css' %}"
+          integrity="sha512-IScV5kvJo+TIPbxENerxZcEpu9VrLUGh1qYWv6Z9aylhxWE4k4Fch3CHl0IYYmN+jrnWQBPlpoTVoWfSMakoKA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'cdn.baykarmagaza.com/staticv2/css/normalize.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'cdn.baykarmagaza.com/staticv2/css/b-store-final-2.css' %}">
+    
+    <script src="{% static 'cdn.baykarmagaza.com/staticv2/smart-selects/admin/js/bindfields.js' %}"></script>
+    <script src="{% static 'cdn.baykarmagaza.com/staticv2/smart-selects/admin/js/chainedfk.js' %}"></script>
+    
+    <style>
+        {% block style %}{% endblock style %}
+        .overflow-y-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .overflow-y-scroll::-webkit-scrollbar-track {
+            background: white;
+        }
+
+        .overflow-y-scroll::-webkit-scrollbar-thumb {
+            background: #e7e5e5;
+            border-radius: 4px;
+        }
+    </style>
+
+</head>
+    <body class="bg-lightgray">
+        {% include "includes/headerpages.html" %}
+        {% block content %}
+        <section class="sm:py-5 mt-20 lg:mt-28">
+            <div class="container sm:px-2 lg:px-20 mx-auto">
+                {% for product in products %}
+                <div class="lg:col-gap-12 xl:col-gap-16 mt-8 grid grid-cols-1 gap-12 lg:mt-5 items-stretch lg:grid-cols-5 lg:gap-5">
+                    <div class="lg:col-span-2 lg:row-end-1 self-start rounded-lg">
+                        <div class="flex flex-col gap-3 p-5 mb-5 bg-white rounded-lg">
+                            <div class="w-full">
+                                <div class="img-showcase relative bg-lightgray">
+                                    {% for product in products %}
+                                    {% if  product.photo %}
+                                    <img id="big-image" class="select-none mx-auto py-4"
+                                    src="{{product.photo.url}}" alt="" loading="lazy">
+                                    <div id="zoom-div"
+                                         class="hidden lg:inline bg-white overflow-hidden border-2 border-neutral-100 rounded-lg absolute top-0 md:left-[400px] xl:left-[500px] w-full h-full p-2">
+                                        <img id="zoom-image" class="md:h-full w-full object-cover rounded-lg"
+                                             src="{{product.photo.url}}" loading="lazy" alt="">
+                                    </div>
+                                    <div class="imgPicturesSelect w-full overflow-x-auto bg-lightgray h-20 select-none text-center">
+                                        <div class="h-full flex items-center justify-start gap-5 p-2 px-3">
+                                            
+                                                <img class="img-item object-cover cursor-pointer hover:scale-110 transition-all duration-300"
+                                                     style="width: auto;height: 90%" loading="lazy"
+                                                     src="{{product.photo.url}}"
+                                                     alt="" data-id="1" onclick="rotateSelectHandler(event)"/>
+                                            
+                                        </div>
+                                    </div>
+                                    {% else %}
+                                    <img id="big-image" class="select-none mx-auto py-4"
+                                         src="{% static 'img/noimg.png' %}" alt="" loading="lazy">
+                                    {% endif %}
+                                    {% endfor %}
+                                    <h1>{{ product.model }} Detayı</h1>
+                                    <p>Kategori: {{ product.category }}</p>
+                                    <p>Marka: {{ product.brand }}</p>
+                                    <p>Ağırlık: {{ product.weight }}</p>
+                                    <p>Detaylar: {{ product.details }}</p>
+                                    <p>Fiyat: {{ product.price }} ₺</p>
+                                
+                                    <form method="POST">
+                                        {% csrf_token %}
+                                        {{ rental_form.as_p }}
+                                    </form>                              
+                                    {% for message in messages %}
+                                        <div>{{ message }}</div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <form class="col-span-2" method="POST">
+                            {% csrf_token %}
+                            <div class="lg:col-span-2 flex flex-col sm:flex-row justify-between items-center gap-5 sm:gap-0 sm:items-end">
+                                <button class=" sm:flex-1 relative bg-primary rounded-lg text-white h-11 flex items-center justify-around w-40 sm:w-60 md:w-80 text-xs font-medium hover:opacity-90 transition-all duration-200 hover:scale-105"
+                                type="submit">
+                                <a href="{% if user.is_authenticated %}{% url 'rent' %}{% else %}{% url 'login' %}{% endif %}">
+                                        <img src="https://cdn.baykarmagaza.com/staticv2/img/basketIcon2.svg" alt=""
+                                             class="absolute left-3 sm:left-5">
+                                        Günlük {{product.price}} ₺'den Kirala
+                                    </a>
+                                    </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="lg:col-span-3 bg-white p-5 rounded-lg">
+                        <div class="flex flex-col sm:flex-row justify-between">
+                            <h1 class="text-3xl md:text-2xl font-large text-gray-900 text-dark">
+                                {{product.category.name}} /
+                            </h1>
+                        </br>
+                            <div class="flex items-center flex-1 flex-wrap gap-y-4">
+                                <a class="flex-shrink-0 mr-3">
+                                </a>
+                                <h1 class="text-xl md:text-xl font-medium text-gray-900 text-dark">
+                                    {{product.brand}} / {{product.model}}
+                                </h1>
+                            </div>
+                        </div>
+                        
+                            <div class="w-full bg-lightgray h-48 my-5 rounded-lg p-5">
+                                <div class="flex justify-between items-center">
+                                    <div class="flex flex-col">
+                                        <p class="font-medium text-dark text-md">
+                                            {{product.details}}
+                                        </p>
+                                        <p class="font-medium text-center text-sm text-lightgrayg">
+                                        </br>
+                                    </br></br></br>
+                                            {{product.weight}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+        {% endfor %}
+            </div>
+        </section>
+        {% endblock content %}
+        {% include "includes/footer.html" %}
+<script src="{% static 'code.jquery.com/jquery-3.7.1.min.js' %}"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="{% static 'cdn.jsdelivr.net/npm/inputmask%405.0.9-beta.36/dist/jquery.inputmask.min.js' %}"></script>
+<script src="{% static 'cdn.jsdelivr.net/npm/alpinejs%403.13.2/dist/cdn.min.js' %}" integrity="sha256-MAnclv071ggEnpQbfWW6weXXKd5wErU2fZ6yuDYvdPE=" crossorigin="anonymous"></script>
+<script src="{% static 'cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.27/sweetalert2.min.js' %}"
+        integrity="sha512-mJQ9oQHzLM2zXe1cwiHmnMddNrmjv1YlaKZe1rM4J7q8JTnNn9UgeJVBV9jyV/lVGdXymVx6odhgwNZjQD8AqA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{% static 'cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js' %}"
+        integrity="sha512-QwpsxtdZRih55GaU/Ce2Baqoy2tEv9GltjAG8yuTy2k9lHqK7VHHp3wWWe+yITYKZlsT3AaCj49ZxMYPp46iJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{% static 'cdn.baykarmagaza.com/staticv2/js/base.js' %}"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        
+    });
+</script>
+<script>
+    function addFavorites(btn, product_id) {
+        let submitBtn = $(btn)
+        submitBtn.prop('disabled', true);
+
+        $.ajax({
+            type: 'POST',
+            url: '/tr/product/add/favorite/list/',
+            data: {product_id},
+            headers: {
+                'X-CSRFToken': 'f9NRsaBXFaEeaHPd7mRFqGsm6lEzHeqpyikpEDmL1dZfuOxtxG9lksjGUNWw7Gh2'
+            },
+            success: function (response) {
+                
+                $(`#fav-${product_id}`).toggleClass('deactiveHeart activeHeart')
+                fireToastDisable(response, submitBtn)
+
+                
+                
+                
+            },
+            error: function (response) {
+                fireToastDisable(response, submitBtn)
+            }
+        });
+    }
+</script>
+<script>
+    function updateSideBasket() {
+        $.ajax({
+            type: 'POST',
+            url: '/tr/checkout/get-side-basket/',
+            headers: {
+                'X-CSRFToken': 'f9NRsaBXFaEeaHPd7mRFqGsm6lEzHeqpyikpEDmL1dZfuOxtxG9lksjGUNWw7Gh2'
+            },
+            success: function (data) {
+                $('#sideBasketProducts').html(data);
+                let product_count = $('#productCount').attr('data-count')
+                 $('#basketCountWeb').html(product_count)
+                $('#basketCount').html(product_count)
+                 
+            },
+            error: function () {
+                Toast.fire({
+                    icon: 'error',
+                    title: 'Beklenmedik bir hata oluştu. Lütfen yeniden deneyiniz.'
+                })
+            }
+        });
+    }
+</script>
+<script>
+    function getBasketTotal() {
+        $.ajax({
+            type: 'POST',
+            url: '/tr/checkout/get-basket-total/',
+            headers: {
+                'X-CSRFToken': 'f9NRsaBXFaEeaHPd7mRFqGsm6lEzHeqpyikpEDmL1dZfuOxtxG9lksjGUNWw7Gh2'
+            },
+            success: function (data) {
+                $('#basketTotal').html(data);
+            },
+            error: function () {
+                Toast.fire({
+                    icon: 'error',
+                    title: 'Beklenmedik bir hata oluştu. Lütfen yeniden deneyiniz.'
+                })
+            }
+        });
+    }
+</script>
+<script>
+    function getBasket() {
+        $.ajax({
+            type: 'POST',
+            url: '/tr/checkout/get-basket/',
+            headers: {
+                'X-CSRFToken': 'f9NRsaBXFaEeaHPd7mRFqGsm6lEzHeqpyikpEDmL1dZfuOxtxG9lksjGUNWw7Gh2'
+            },
+            success: function (data) {
+                $('.basketProducts').html(data);
+            },
+            error: function () {
+                Toast.fire({
+                    icon: 'error',
+                    title: 'Beklenmedik bir hata oluştu. Lütfen yeniden deneyiniz.'
+                })
+            }
+        });
+    }
+</script>
+<script>
+    function addRemoveBasket(btn, url, id) {
+        let submitBtn = $(btn);
+        submitBtn.prop('disabled', true)
+
+        $.ajax({
+            type: 'POST',
+            url: url,
+            headers: {
+                'X-CSRFToken': 'f9NRsaBXFaEeaHPd7mRFqGsm6lEzHeqpyikpEDmL1dZfuOxtxG9lksjGUNWw7Gh2'
+            },
+            success: function (response) {
+                fireToastDisable(response, submitBtn)
+                
+                updateSideBasket();
+                submitBtn.parent().find(('input')).val(response.product_quantity);
+                $(`#totalProduct`).html(response.basket_total);
+                submitBtn.parent().parent().parent().find('.price').html(response.total_product_price);
+            },
+            error: function (response) {
+                fireToastDisable(response, submitBtn)
+            }
+        });
+    }
+</script>
+<script>
+    function removeFromBasket(url, id) {
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: {id},
+            headers: {
+                'X-CSRFToken': 'f9NRsaBXFaEeaHPd7mRFqGsm6lEzHeqpyikpEDmL1dZfuOxtxG9lksjGUNWw7Gh2'
+            },
+            success: function (response) {
+                getBasket()
+                getBasketTotal();
+                updateSideBasket();
+                $(`.itemQuantity-${id}`).val(response.product_quantity);
+                $(`#totalProduct`).html(response.basket_total);
+                $(`.productTotalPrice-${id}`).html(response.total_product_price);
+                fireToast(response)
+            },
+            error: function () {
+                Toast.fire({
+                    icon: 'error',
+                    title: 'Beklenmedik bir hata oluştu. Lütfen yeniden deneyiniz.'
+                })
+            }
+        });
+    }
+</script>
+
+<script>
+    function addBasket(btn, id, attribute) {
+        let submitBtn = $(btn)
+
+        $.ajax({
+            type: 'POST',
+            url: '/tr/checkout/add-to-cart/',
+            data: {'product_id': id, 'select_attributes': attribute, 'product_quantity': 1},
+            headers: {
+                'X-CSRFToken': 'f9NRsaBXFaEeaHPd7mRFqGsm6lEzHeqpyikpEDmL1dZfuOxtxG9lksjGUNWw7Gh2'
+            },
+            success: function (response) {
+                updateSideBasket()
+                fireToastDisable(response, submitBtn)
+            },
+            error: function (response) {
+                fireToastDisable(response, submitBtn)
+            }
+        });
+    }
+</script>
+
+<script src="{% static 'cdn.baykarmagaza.com/staticv2/js/account.js' %}"></script>
+<script>
+    function goToTop() {
+        window.scrollTo(0, 0);
+    }
+</script>
+<script>
+    function getAddresses() {
+        $.ajax({
+            url: "/tr/accounts/get-addresses",
+            success: function (data) {
+                $('#userAddresses').html(data);
+                goToTop();
+            },
+            error: function (response) {
+                if (response.status === 403 && response.responseJSON.redirect_url) {
+                    window.location.href = response.responseJSON.redirect_url;
+                } else {
+                    Toast.fire({
+                        icon: 'error',
+                        title: 'Beklenmedik bir hata oluştu.Lütfen yeniden deneyiniz.'
+                    })
+                }
+            }
+        });
+    }
+</script>
+<script>
+    function getOrders() {
+        $.ajax({
+            url: "/tr/accounts/get-orders",
+            success: function (data) {
+                $('#orderProducts').html(data);
+                goToTop();
+            },
+            error: function (response) {
+                if (response.status === 403 && response.responseJSON.redirect_url) {
+                    window.location.href = response.responseJSON.redirect_url;
+                } else {
+                    Toast.fire({
+                        icon: 'error',
+                        title: 'Beklenmedik bir hata oluştu.Lütfen yeniden deneyiniz.'
+                    })
+                }
+            }
+        });
+    }
+</script>
+<script>
+    function getReturns() {
+        $.ajax({
+            url: "/tr/accounts/get-returns",
+            success: function (data) {
+                $('#returnedProducts').html(data);
+                goToTop();
+            },
+            error: function (response) {
+                if (response.status === 403 && response.responseJSON.redirect_url) {
+                    window.location.href = response.responseJSON.redirect_url;
+                } else {
+                    Toast.fire({
+                        icon: 'error',
+                        title: 'Beklenmedik bir hata oluştu.Lütfen yeniden deneyiniz.'
+                    })
+                }
+            }
+        });
+    }
+</script>
+<script>
+    function getUnCommented() {
+        $.ajax({
+            url: "/tr/accounts/get-uncommented",
+            success: function (data) {
+                $('#productComments').html(data);
+                $('#commentedBtn').removeClass('bg-hoverblue text-white').addClass(
+                    'bg-lightgray text-hoverblue')
+                $('#unCommentedBtn').addClass('bg-hoverblue text-white').removeClass(
+                    'bg-lightgray text-hoverblue')
+                goToTop();
+            },
+            error: function (response) {
+                if (response.status === 403 && response.responseJSON.redirect_url) {
+                    window.location.href = response.responseJSON.redirect_url;
+                } else {
+                    Toast.fire({
+                        icon: 'error',
+                        title: 'Beklenmedik bir hata oluştu.Lütfen yeniden deneyiniz.'
+                    })
+                }
+            }
+        });
+    }
+</script>
+<script>
+    function getCommented() {
+        $.ajax({
+            url: "/tr/accounts/get-commented",
+            success: function (data) {
+                $('#productComments').html(data);
+                $('#commentedBtn').addClass('bg-hoverblue text-white').removeClass(
+                    'bg-lightgray text-hoverblue')
+                $('#unCommentedBtn').removeClass('bg-hoverblue text-white').addClass(
+                    'bg-lightgray text-hoverblue')
+                goToTop();
+            },
+            error: function (response) {
+                if (response.status === 403 && response.responseJSON.redirect_url) {
+                    window.location.href = response.responseJSON.redirect_url;
+                } else {
+                    Toast.fire({
+                        icon: 'error',
+                        title: 'Beklenmedik bir hata oluştu.Lütfen yeniden deneyiniz.'
+                    })
+                }
+            }
+        });
+    }
+</script>
+
+<script>
+    function getFavorites() {
+        $.ajax({
+            url: "/tr/accounts/get-favorites",
+            success: function (data) {
+                $('#favoriteProducts').html(data);                
+                goToTop();
+            },
+            error: function (response) {
+                if (response.status === 403 && response.responseJSON.redirect_url) {
+                    window.location.href = response.responseJSON.redirect_url;
+                } else {
+                    Toast.fire({
+                        icon: 'error',
+                        title: 'Beklenmedik bir hata oluştu.Lütfen yeniden deneyiniz.'
+                    })
+                }
+            }
+        });
+    }
+</script>
+
+
+    <script src="{% static 'cdn.baykarmagaza.com/staticv2/js/product_list.js' %}"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#checkboxes :checkbox').change(function () {
+                $('#checkboxes :checkbox').prop('disabled', true);
+
+                let aircraft = []
+                let stars = []
+                let categories = [];
+                $('.aircraftCategories input:checked').each(function () {
+                    aircraft.push($(this).attr('name'));
+                });
+                $('.ratings input:checked').each(function () {
+                    stars.push($(this).attr('name'));
+                });
+                $('.categories input:checked').each(function () {
+                    categories.push($(this).attr('name'));
+                });
+
+                $.ajax({
+                    url: `/tr/product/product-list/?aircraft=${aircraft}&star=${stars}&category=${categories ? categories : '0'}`,
+                    success: function (data) {
+                        $('#productsDiv').html(data);
+                    },
+                    error: function (data) {
+                        Toast.fire({
+                            icon: 'error',
+                            title: 'Beklenmedik bir hata oluştu. Lütfen yeniden deneyiniz.'
+                        });
+                    },
+                    complete: function () {
+                        $('#checkboxes :checkbox').prop('disabled', false);
+                    }
+                });
+            })
+        })
+
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            let isAnimating = false;
+            $("#checkboxes h3").click(function () {
+                if (isAnimating) return;
+                isAnimating = true;
+                let div = $(this).next('div');
+                let icon = $(this).find('i');
+
+                if (div.css('opacity') == '0') {
+                    div.css({visibility: 'hidden', position: 'absolute', height: 'auto'});
+                    let divHeight = div.height();
+
+                    div.css({visibility: 'visible', position: 'static', height: '0'});
+
+                    div.animate({'opacity': '1', 'height': divHeight}, 300, function () {
+                        div.css('pointer-events', 'auto');
+                    });
+                    div.css('display', 'block');
+                    icon.css('transform', 'rotate(90deg)');
+                } else {
+                    div.animate({'opacity': '0', 'height': '0px'}, 300, function () {
+                        div.css({'pointer-events': 'none', 'display': 'none'});
+                    });
+                    icon.css('transform', 'rotate(0deg)');
+                }
+
+                setTimeout(function () {
+                    isAnimating = false;
+                }, 300);
+                setTimeout(adjustOverflow, 310);
+            });
+        });
+    </script>
+</body>
+</html>

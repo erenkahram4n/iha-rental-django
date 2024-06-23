@@ -1,0 +1,14 @@
+{% extends "baykarmagaza.com/tr/product/detail/detail.html" %}
+{% load static %}
+{% block title %}Ürün Sil{% endblock %}
+
+{% block content %}
+<div class="max-w-md mx-auto mt-10">
+    <p>Gerçekten "{{ product.brand }} - {{ product.model }}" ürününü silmek istediğinizden emin misiniz?</p>
+    <form action="{% url 'delete_product' product.pk %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn-submit">Evet, Sil</button>
+        <a href="{% url 'products' %}" class="text-blue-500 ml-2">Vazgeç</a>
+    </form>
+</div>
+{% endblock %}

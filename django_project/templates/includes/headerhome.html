@@ -1,0 +1,520 @@
+{% load static %}
+<header class="w-full z-20 backdrop-blur-md fixed lg:bg-transparent transition-all duration-300">
+    <div class="container mx-auto py-3 lg:px-2">
+        <div class="lg:p-3">
+            <nav class="w-full p-2 flex flex-row items-center justify-between flex-wrap z-50 transition-all duration-300 ease-out ">
+                <button id="toggleButton" type="button" onclick="toggleMenu()"
+                        class="block lg:hidden px-4 text-white focus:outline-none">
+                    <svg class="h-6 w-6 fill-current" id="menuIcon" xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 24 24">
+                        <path id="hamburger" fill-rule="evenodd"
+                              d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+                        <path id="cross" class="hidden" fill-rule="evenodd" clip-rule="evenodd"
+                              d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z"/>
+                    </svg>
+                </button>
+                <div class=" bg-dark flex items-center flex-shrink-0 ml-6 md:ml-0 mr-6">
+                    <a class="non-hover no-underline hover:no-underline" href="{% url 'home' %}">
+                        <span>
+                            <i class="em em-grinning"></i>
+                            <div class="w-[175px] h-12 relative">
+                                <img id="mainLogo" class="absolute top-1/2 left-0 -translate-y-1/2 w-full"
+                                     src="https://cdn.baykarmagaza.com/media/uploads/2023/12/09/a6916M0ipZGtRtwRNjkdvUJfN2LZI82d.svg" alt="Baykar Mağaza"
+                                     loading="eager"/>
+                                <img id="darkLogo" class="absolute top-1/2 left-0 -translate-y-1/2 w-full hidden"
+                                     src="{% static 'cdn.baykarmagaza.com/media/images/contents/Baykar_magaza_Logo.png' %}" alt="Baykar Mağaza"
+                                     loading="eager"/>
+                            </div>
+                        </span>
+                    </a>
+                </div>
+                <a onclick="openSideBasket()" id="basketBtn"
+                   class="lg:hidden h-full flex items-center py-1 px-3 group rounded transition-all duration-300 text-white hover:text-hoverblue">
+                    <button class="flex navActions items-center rounded-md">
+                        <div class="relative h-[24px] w-[21px] ">
+                            <img id="basketIcon" class="absolute inset-full top-0 left-0 inline "
+                                 src="https://cdn.baykarmagaza.com/staticv2/img/basketIcon.svg" alt="">
+                            <img id="darkBasketIcon" class="absolute top-0 left-0 inset-full hidden"
+                                 src="https://cdn.baykarmagaza.com/staticv2/img/darkbasketIcon.svg" alt="">
+                            <small class="absolute top-0 right-0 font-semibold">
+                                <div class="w-3 h-3 flex items-start justify-center">
+                                            <span id="basketCountWeb" class="text-[9px] leading-3 text-black">
+                                                0
+                                            </span>
+                                </div>
+                            </small>
+                        </div>
+                    </button>
+                </a>
+                <div class=" w-full flex-grow  !lg:max-h-full lg:flex lg:items-center lg:w-auto ml-3 md:ml-0 hideNavBar min-h-screen lg:min-h-[10%] transition-all duration-300"
+                     id="menuItems">
+                     {% if user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                     <ul class="lg:pt-0 list-reset lg:flex justify-center flex-1 items-center border-b border-slate-400/50 lg:border-none">
+                        <li class="mr-3 my-2 md:my-0">
+                            <a class="non-hover border-b border-b-transparent font-semibold hover:text-hoverblue hover:border-hoverblue !hover:bg-transparent text-xs mx-3 transition-all duration-300 text-hoverblue border-hoverblue border-b-hoverblue"
+                               href="{% url "home" %}" @click="isOpen = false">
+                                ANA SAYFA
+                            </a>
+                        </li>
+                        
+                            <li class="mr-3 my-2 md:my-0">
+                                <a class="non-hover text-warning border-b border-b-transparent font-semibold hover:text-hoverblue hover:border-hoverblue !hover:bg-transparent text-xs mx-3 transition-all duration-300"
+                                   href="{% url 'create' %}"
+                                   @click="isOpen = false">
+                                   ÜRÜN YÜKLE
+                                </a>
+                            </li>
+                            <li class="mr-3 my-2 md:my-0">
+                                <a class="non-hover text-warning border-b border-b-transparent font-semibold hover:text-hoverblue hover:border-hoverblue !hover:bg-transparent text-xs mx-3 transition-all duration-300"
+                                   href="{% url 'products' %}"
+                                   @click="isOpen = false">
+                                   ÜRÜN DÜZENLE
+                                </a>
+                            </li>
+                            <li class="mr-3 my-2 md:my-0">
+                                <a class="non-hover border-b border-b-transparent font-semibold hover:text-hoverblue hover:border-hoverblue !hover:bg-transparent text-xs mx-3 transition-all duration-300"
+                                href="{% url 'products' %}"
+                                @click="isOpen = false">
+                                ÜRÜN SİL
+                            </a>
+                        </li>
+                        </ul>
+
+                        {% else %}
+                        <ul class="lg:pt-0 list-reset lg:flex justify-center flex-1 items-center border-b border-slate-400/50 lg:border-none">
+                            <li class="mr-3 my-2 md:my-0">
+                                <a class="non-hover border-b border-b-transparent font-semibold hover:text-hoverblue hover:border-hoverblue !hover:bg-transparent text-xs mx-3 transition-all duration-300 text-hoverblue border-hoverblue border-b-hoverblue"
+                                href="{% url "home" %}" @click="isOpen = false">
+                                ANA SAYFA
+                            </a>
+                        </li>
+                        
+                        <li class="mr-3 my-2 md:my-0">
+                            <a class="non-hover border-b border-b-transparent font-semibold hover:text-hoverblue hover:border-hoverblue !hover:bg-transparent text-xs mx-3 transition-all duration-300"
+                            href="{% url 'giyim' %}"
+                            @click="isOpen = false">
+                            GİYİM
+                        </a>
+                    </li>
+                    
+                    <li class="mr-3 my-2 md:my-0">
+                        <a class="non-hover border-b border-b-transparent font-semibold hover:text-hoverblue hover:border-hoverblue !hover:bg-transparent text-xs mx-3 transition-all duration-300"
+                        href="{% url 'maket' %}"
+                        @click="isOpen = false">
+                        MAKET
+                    </a>
+                </li>
+                
+                <li class="mr-3 my-2 md:my-0">
+                    <a class="non-hover border-b border-b-transparent font-semibold hover:text-hoverblue hover:border-hoverblue !hover:bg-transparent text-xs mx-3 transition-all duration-300"
+                    href="{% url 'cocuk' %}"
+                    @click="isOpen = false">
+                    ÇOCUK GİYİM
+                </a>
+            </li>
+            
+            <li class="mr-3 my-2 md:my-0">
+                <a class="non-hover border-b border-b-transparent font-semibold hover:text-hoverblue hover:border-hoverblue !hover:bg-transparent text-xs mx-3 transition-all duration-300"
+                href="{% url 'aksesuar' %}"
+                @click="isOpen = false">
+                AKSESUAR
+            </a>
+        </li>
+        <li class="mr-3 my-2 md:my-0">
+            <a class="non-hover text-success border-b border-b-transparent font-semibold hover:text-hoverblue hover:border-hoverblue !hover:bg-transparent text-xs mx-3 transition-all duration-300"
+            href="{% url 'products' %}"
+            @click="isOpen = false">
+            KİRALA
+        </a>
+    </li>
+    
+</ul>
+{% endif %}
+{% else %}
+<ul class="lg:pt-0 list-reset lg:flex justify-center flex-1 items-center border-b border-slate-400/50 lg:border-none">
+                        <li class="mr-3 my-2 md:my-0">
+                            <a class="non-hover border-b border-b-transparent font-semibold hover:text-hoverblue hover:border-hoverblue !hover:bg-transparent text-xs mx-3 transition-all duration-300 text-hoverblue border-hoverblue border-b-hoverblue"
+                               href="{% url "home" %}" @click="isOpen = false">
+                                ANA SAYFA
+                            </a>
+                        </li>
+                        
+                            <li class="mr-3 my-2 md:my-0">
+                                <a class="non-hover border-b border-b-transparent font-semibold hover:text-hoverblue hover:border-hoverblue !hover:bg-transparent text-xs mx-3 transition-all duration-300"
+                                   href="{% url 'giyim' %}"
+                                   @click="isOpen = false">
+                                    GİYİM
+                                </a>
+                            </li>
+                        
+                            <li class="mr-3 my-2 md:my-0">
+                                <a class="non-hover border-b border-b-transparent font-semibold hover:text-hoverblue hover:border-hoverblue !hover:bg-transparent text-xs mx-3 transition-all duration-300"
+                                   href="{% url 'maket' %}"
+                                   @click="isOpen = false">
+                                    MAKET
+                                </a>
+                            </li>
+                        
+                            <li class="mr-3 my-2 md:my-0">
+                                <a class="non-hover border-b border-b-transparent font-semibold hover:text-hoverblue hover:border-hoverblue !hover:bg-transparent text-xs mx-3 transition-all duration-300"
+                                   href="{% url 'cocuk' %}"
+                                   @click="isOpen = false">
+                                    ÇOCUK GİYİM
+                                </a>
+                            </li>
+                        
+                            <li class="mr-3 my-2 md:my-0">
+                                <a class="non-hover border-b border-b-transparent font-semibold hover:text-hoverblue hover:border-hoverblue !hover:bg-transparent text-xs mx-3 transition-all duration-300"
+                                   href="{% url 'aksesuar' %}"
+                                   @click="isOpen = false">
+                                    AKSESUAR
+                                </a>
+                            </li>
+                            <li class="mr-3 my-2 md:my-0">
+                                <a class="non-hover text-success border-b border-b-transparent font-semibold hover:text-hoverblue hover:border-hoverblue !hover:bg-transparent text-xs mx-3 transition-all duration-300"
+                                   href="{% url 'products' %}"
+                                   @click="isOpen = false">
+                                    KİRALA
+                                </a>
+                            </li>
+                        
+                    </ul>
+                    {% endif %}
+
+                    <div class="text-left lg:h-8 flex flex-col lg:flex-row lg:items-center gap-2 !md:gap-0 my-4 md:my-2 lg:my-0">
+                        {% if user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                        <a class="hidden lg:flex navActions h-full  items-center py-1 px-3 group rounded transition-all duration-300 text-white hover:text-hoverblue"
+                           onmouseover="$(this).find('#darkUserIcon').attr('src','https://cdn.baykarmagaza.com/staticv2/img/userIconBlue.svg')"
+                           onmouseleave="$(this).find('#darkUserIcon').attr('src','https://cdn.baykarmagaza.com/staticv2/img/darkuserIcon.svg')"
+                           href="{% url "logout" %}"
+                        >
+                            <img id="userIcon" class="h-[22px] w-[22px] " src="https://cdn.baykarmagaza.com/staticv2/img/userIcon.svg" alt="">
+                            <img id="darkUserIcon" class="h-[22px] w-[22px] hidden"
+                                 src="https://cdn.baykarmagaza.com/staticv2/img/darkuserIcon.svg" alt="">
+                            <p class="font-medium leading-3 text-white tracking-wide  text-xs ml-1 ">
+                                
+                                    <span> (Admin) | Çıkış</span>
+                        
+                            </p>
+                        </a>
+                        {% else %}
+                        <a class="hidden lg:flex navActions h-full  items-center py-1 px-3 group rounded transition-all duration-300 text-white hover:text-hoverblue"
+                           onmouseover="$(this).find('#darkUserIcon').attr('src','https://cdn.baykarmagaza.com/staticv2/img/userIconBlue.svg')"
+                           onmouseleave="$(this).find('#darkUserIcon').attr('src','https://cdn.baykarmagaza.com/staticv2/img/darkuserIcon.svg')"
+                           href="{% url "logout" %}"
+                        >
+                            <img id="userIcon" class="h-[22px] w-[22px] " src="https://cdn.baykarmagaza.com/staticv2/img/userIcon.svg" alt="">
+                            <img id="darkUserIcon" class="h-[22px] w-[22px] hidden"
+                                 src="https://cdn.baykarmagaza.com/staticv2/img/darkuserIcon.svg" alt="">
+                            <p class="font-medium leading-3 text-white tracking-wide  text-xs ml-1 ">
+                                
+                                    <span>{{request.user}} | Çıkış</span>
+                        
+                            </p>
+                        </a>
+                        {% endif %}
+                        {% else %}
+                        <a class="hidden lg:flex navActions h-full  items-center py-1 px-3 group rounded transition-all duration-300 text-white hover:text-hoverblue"
+                           onmouseover="$(this).find('#darkUserIcon').attr('src','https://cdn.baykarmagaza.com/staticv2/img/userIconBlue.svg')"
+                           onmouseleave="$(this).find('#darkUserIcon').attr('src','https://cdn.baykarmagaza.com/staticv2/img/darkuserIcon.svg')"
+                           href="{% url "login" %}"
+                        >
+                            <img id="userIcon" class="h-[22px] w-[22px] " src="https://cdn.baykarmagaza.com/staticv2/img/userIcon.svg" alt="">
+                            <img id="darkUserIcon" class="h-[22px] w-[22px] hidden"
+                                 src="https://cdn.baykarmagaza.com/staticv2/img/darkuserIcon.svg" alt="">
+                            <p class="font-medium leading-3 text-white tracking-wide  text-xs ml-1 ">
+                                
+                                    <span>Giriş Yap</span>
+                                
+                            </p>
+                        {% endif %}
+                        </a>
+                        <a class="lg:hidden navActions h-full flex items-center justify-between py-1 px-3 group rounded transition-all duration-300 text-white hover:text-hoverblue text-sm"
+                                    
+                                 href="account/login/index.html">
+                            <div class="flex flex-row items-center">
+                                <img id="userIcon2" class="h-[22px] w-[22px] " src="https://cdn.baykarmagaza.com/staticv2/img/userIcon.svg"
+                                     alt="">
+                                <img id="darkUserIcon2" class="h-[22px] w-[22px] hidden"
+                                     src="https://cdn.baykarmagaza.com/staticv2/img/darkuserIcon.svg" alt="">
+                                <p class="font-medium leading-3 text-white tracking-wide  text-xs ml-1 ">
+                                    
+                                        <span>Giriş Yap</span>
+                                    
+                                </p>
+                            </div>
+                            
+                        </a>
+                        <ul id="altMenu" class="px-9 text-sm text-slate-400 navtabs">
+                            <li class="mt-2 tab-link" data-tab="account">
+                                <a class="hover:text-hoverblue" href="accounts/index.html">
+                                    Üyelik Bilgilerim
+                                </a>
+                            </li>
+                            <li class="mt-3 mb-3 tab-link" data-tab="addresses" onclick="clickMenuBtn(getAddresses)">
+                                <a class="mt-2 hover:text-hoverblue" href="accounts/index.html#addresses">
+                                    Adres Bilgilerim
+                                </a>
+                            </li>
+                        </ul>
+                        
+
+                        <ul id="altOrders" class="lg:hidden px-9 text-sm text-slate-400 navtabs">
+                            <li class="tab-link" data-tab="orders" onclick="clickMenuBtn(getOrders)">
+                                <a href="accounts/index.html#orders">
+                                    <p class="font-medium text-sm my-1">
+                                        <small><i class="fa-solid hidden text-xs m-1 fa-play"></i></small>
+                                        Siparişlerim
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="tab-link" data-tab="return" onclick="clickMenuBtn(getReturns)">
+                                <a href="accounts/index.html#return">
+                                    <p class="font-medium text-sm my-1">
+                                        <small><i class="fa-solid hidden text-xs mr-1 fa-play"></i></small>
+                                        İade Taleplerim
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="tab-link" data-tab="comments" onclick="clickMenuBtn(getUnCommented)">
+                                <a href="accounts/index.html#comments">
+                                    <p class="font-medium text-sm my-1">
+                                        <small><i class="fa-solid hidden text-xs mr-1 fa-play"></i></small>
+                                        Değerlendirmelerim
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="tab-link" data-tab="favorites" onclick="clickMenuBtn(getFavorites)">
+                                <a href="accounts/index.html#favorites">
+                                    <p class="font-medium text-sm my-1">
+                                        <small><i class="fa-solid hidden text-xs mr-1 fa-play"></i></small>
+                                        Favorilerim
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <a onclick="openSideBasket()" id="basketBtn"
+                           class="hidden lg:flex items-center py-1 px-3 group rounded transition-all duration-300 text-white hover:text-hoverblue">
+                            <button class="flex navActions items-center rounded-md">
+                                <div class="relative h-[24px] w-[21px] ">
+                                    <img id="basketIconWeb" class="absolute inset-full top-0 left-0 inline"
+                                         src="https://cdn.baykarmagaza.com/staticv2/img/basketIcon.svg" alt="">
+                                    <img id="darkBasketIconWeb" class=" absolute top-0 left-0 inset-full hidden"
+                                         src="https://cdn.baykarmagaza.com/staticv2/img/darkbasketIcon.svg" alt="">
+                                    <small class="absolute top-0 right-0 font-semibold">
+                                        <div class="w-3 h-3 flex items-start justify-center">
+                                            <span id="basketCount" class="text-[9px] leading-3 text-black" style="color: white;">
+                                                0
+                                            </span>
+                                        </div>
+                                    </small>
+                                </div>
+                                <p class="font-medium leading-3 tracking-wide text-white text-xs ml-1">
+                                    Sepetim
+                                </p>
+                            </button>
+                        </a>
+
+                        <span id="divider" class="hidden lg:block h-full bg-black py-4 w-px"></span>
+                        
+
+
+
+
+
+<form id="langForm" action="https://baykarmagaza.com/i18n/setlang/" method="POST" class="h-full flex items-center py-1 md:py-2 md:p-1 group rounded transition-all duration-300 hover:bg-hoverblue" ><input type="hidden" name="csrfmiddlewaretoken" value="ney5tIBOw2BFMbmzjGaxEE38oYzz0ipgGn5DFbmCS5WG6i4PJ0sdyqUscqRwqKgT">
+    
+        
+            
+
+<input name="next" type="hidden" value="/tr/">
+
+    <button type="submit" value="en" name="language"
+            onmouseover="$(this).find('#darkLangIcon').attr('src','https://cdn.baykarmagaza.com/staticv2/img/darklangIconBlue.svg')"
+            onmouseleave="$(this).find('#darkLangIcon').attr('src','https://cdn.baykarmagaza.com/staticv2/img/darklangIcon.svg')"
+            class="flex navActions items-center transition-all duration-300 mx-3 ">
+        <img id="langIcon" class="!h-[18px] !w-[18px]" src="https://cdn.baykarmagaza.com/staticv2/img/langIcon.svg" alt=""/>
+        <img id="darkLangIcon" class="!h-[18px] !w-[18px] hidden" src="https://cdn.baykarmagaza.com/staticv2/img/darklangIcon.svg" alt=""/>
+        <p id="langText" class="font-medium leading-3 tracking-wide text-white text-xs ml-1">
+            EN
+        </p>
+    </button>
+
+        
+    
+</form>
+
+
+                    </div>
+                    
+                </div>
+            </nav>
+            <div class="hidden md:block"></div>
+        </div>
+    </div>
+</header>
+
+
+
+<div id="basketOverlay" class="overlay hidden z-30 fixed inset-0 bg-black opacity-0 transition-all duration-300"></div>
+
+<div id="sideBasket" class="sidenav !z-50 !w-[22.5%] !min-w-[375px] !p-0 translate-x-full">
+    <div class=" sticky top-0 right-0 z-20">
+        <a class="closebtn" onclick="closeSideBasket()">&times;</a>
+    </div>
+    <div id="sideBasketProducts" class="max-h-screen h-full">
+        
+
+<div class="flex flex-col justify-between h-full">
+    <div class="">
+        <div class="sticky top-0 pt-5 z-10 bg-white/80 backdrop-blur-md ">
+            <p class="text-dark text-md font-bold !tracking-wide px-5">
+                ALIŞVERİŞ SEPETİ
+            </p>
+            <p class="text-lightgrayg text-xs leading-4 tracking-wide px-5" id="productCount" data-count="0">
+                0 ÜRÜN
+            </p>
+            <div class="w-full h-px bg-[#EDEDED] my-5" id="divider"></div>
+        </div>
+        <div class="basketProducts pb-5 px-5">
+            
+
+
+    <style>
+        .divide-y > :not([hidden]) ~ :not([hidden]) {
+            --tw-divide-y-reverse: 0;
+            border-top-width: 0;
+            border-bottom-width: 0;
+        }
+    </style>
+    <img class="mx-auto" src="https://cdn.baykarmagaza.com/staticv2/img/empty-basket.svg" alt="" loading="lazy">
+    <p class="text-center uppercase text-sm font-bold text-primary">Sepetiniz boş</p>
+
+        </div>
+    </div>
+    <div class="sticky bottom-0 pb-0 z-10 bg-white/80 backdrop-blur-sm shadow-[-10px_0_20px_-10px_rgba(100,100,100,1)] ">
+        
+            <div class="col-span-2 w-full my-3">
+                <a href="{% url "giyim" %}" class="!px-5">
+                    <button type="button" class="w-full inline-flex items-center justify-center rounded-md border-2 border-transparent bg-primary bg-none px-4 py-4 text-center text-base font-medium text-white transition-all duration-300 ease-in-out focus:shadow hover:bg-hoverblue">
+                        ALIŞVERİŞE BAŞLA
+                    </button>
+                </a>
+            </div>
+        
+   
+    </div>
+</div>
+    </div>
+</div>
+
+<script>
+    function toggleMenu() {
+        let lgBreakpoint = 1280;
+        let menuItems = $('#menuItems');
+        if ($(window).innerWidth() < lgBreakpoint) {
+            menuItems.toggleClass('active');
+            if (menuItems.hasClass('active')) {
+                menuItems.css('min-height', menuItems[0].scrollHeight + 'px');
+            } else {
+                menuItems.css('max-height', 0)
+            }
+        }
+        $('#hamburger').toggleClass('hidden');
+        $('#cross').toggleClass('hidden');
+        $('header').toggleClass('shadow-[0_5px_10px_-10px_rgb(255,255,255)]');
+    }
+
+    let lastKnownScrollPos = 0;
+    document.addEventListener("scroll", (event) => {
+        const basketCount = $("#basketCount");
+        const basketCountWeb = $("#basketCountWeb");
+
+        const basketIcon = $("#basketIcon");
+        const slider = $(".swiper");
+        const mainLogo = $("#mainLogo");
+        const darkLogo = $("#darkLogo");
+        const darkBasketIcon = $("#darkBasketIcon");
+        const basketIconWeb = $("#basketIconWeb");
+        const darkBasketIconWeb = $("#darkBasketIconWeb");
+        const sliderBottom = slider.offset().top + slider.outerHeight() - 80;
+        if (scrollY >= sliderBottom) {
+            basketIcon.removeClass("inline").addClass("hidden");
+            darkBasketIcon.removeClass("hidden").addClass("inline");
+
+            basketIconWeb.removeClass("inline").addClass("hidden");
+            console.log("----------------");
+            darkBasketIconWeb.removeClass("hidden").addClass("inline");
+            basketCount.removeClass("text-black").addClass("text-white");
+            basketCountWeb.removeClass("text-black").addClass("text-white");
+
+            mainLogo.removeClass("inline").addClass("hidden");
+            darkLogo.removeClass("hidden").addClass("inline");
+        } else {
+            basketIconWeb.removeClass("hidden").addClass("inline");
+            darkBasketIconWeb.removeClass("inline").addClass("hidden");
+            mainLogo.removeClass("hidden").addClass("inline");
+            darkLogo.removeClass("inline").addClass("hidden");
+            basketCount.removeClass("text-white").addClass("text-black");
+            basketCountWeb.removeClass("text-white").addClass("text-black");
+            basketIcon.removeClass("hidden").addClass("inline");
+            darkBasketIcon.removeClass("inline").addClass("hidden");
+        }
+    });
+    console.log(lastKnownScrollPos);
+    const altMenu = document.getElementById("altMenu");
+    altMenu.style.display = "none";
+
+    function toggleMyAccount() {
+
+        if (altMenu.style.display === "none") {
+            altMenu.style.display = "block";
+            altMenu.classList.add("altMenuActive")
+        } else {
+            altMenu.style.display = "none";
+
+        }
+        const caretIcon = document.getElementById('caretIcon');
+
+        if (caretIcon.classList.contains('fa-caret-right')) {
+            caretIcon.classList.remove('fa-caret-right');
+            caretIcon.classList.add('fa-caret-down');
+        } else {
+            caretIcon.classList.remove('fa-caret-down');
+            caretIcon.classList.add('fa-caret-right');
+        }
+        caretIcon.style.animation = 'none';
+        void caretIcon.offsetWidth;
+        caretIcon.style.animation = 'rotateCaret 1s ease';
+    }
+
+    const altOrders = document.getElementById("altOrders");
+    altOrders.style.display = "none";
+
+    function toggleMyOrders() {
+
+        if (altOrders.style.display === "none") {
+            altOrders.style.display = "block";
+            altOrders.classList.add("altOrdersActive")
+        } else {
+            altOrders.style.display = "none";
+
+        }
+        const caretIcon = document.getElementById('caretIcon2');
+
+        if (caretIcon.classList.contains('fa-caret-right')) {
+            caretIcon.classList.remove('fa-caret-right');
+            caretIcon.classList.add('fa-caret-down');
+        } else {
+            caretIcon.classList.remove('fa-caret-down');
+            caretIcon.classList.add('fa-caret-right');
+        }
+        caretIcon.style.animation = 'none';
+        void caretIcon.offsetWidth;
+        caretIcon.style.animation = 'rotateCaret 1s ease';
+    }
+
+</script>

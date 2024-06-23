@@ -1,0 +1,283 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NPCVHED5XM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NPCVHED5XM');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    
+    <title>Baykar Mağaza</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="1984’ten bu yana Türkiye’nin teknolojik olarak bağımsızlaşması amacıyla yerli ve milli üretimden yana çalışan Baykar, geçtiğimiz 35 yıl içinde Türkiye’de savunma ve havacılık alanında dönüşüm yaratacak bir ivmenin öncüsü haline geldi. Bugün Baykar olarak, otomotiv endüstrisi için adım attığımız mühendislik girişimimizi yeni kuşak mühendislerimizle gökyüzüne taşıyarak dünyanın sayılı insansız hava aracı üreticilerinden biri olmanın gururunu taşıyoruz. Türkiye’nin ilk yerli ve milli İnsansız Hava Araçlarını üretirken en önemli motivasyonumuz her zaman kendi mühendislerimize ve beyin gücümüze güvenmek oldu. 
+
+Baykar’ın Türk Silahlı Kuvvetleri’nin envanterine giren ve yurt dışına ihraç edilen savunma teknolojilerinin başarısında da sürekli üretim ve geliştirme kültürü öncü rol oynuyor. Sanayi ve Teknoloji Bakanlığı’ndan tescilli Baykar Ar-Ge Merkezi’mizde havacılık arenasında paradigma dönüşümü sağlayacak ileri teknolojileri milli ve özgün olarak tasarlamaya odaklanıyoruz. Sonuç odaklı düşünen ve motivasyonu yüksek ekip ruhumuz; Ar-Ge ve üretim süreçlerinin iç içe geçmesiyle yeni teknolojilerin dinamik bir şekilde uygulanmasını sağlıyor. Tasarlamak, yapmak ve üretmek kadar; askeriyle, sanayicisiyle ve toplumun tüm katmanları tarafından insansız ve otonom teknolojilerin sahiplenilmesi için çalışmalarımızı sürdürüyoruz. 
+
+Kendi finanse ettiği Ar-Ge faaliyetleriyle Türk havacılık ve savunma tarihinde ilklere imza atan ve Türkiye’de %93 yerlilik oranına ulaşan Baykar, İnsansız Hava Araçları alanında  dünya çapında en ileri teknolojik sistemleri geliştirmeye devam etmektedir.">
+    <meta name="author" content="Baykar Mağaza">
+
+
+    <link rel="icon" type="image/x-icon" href="{% static 'cdn.baykarmagaza.com/media/uploads/2024/01/15/vruDUNOsqH2fRBLkopqojjoIgw3gA7Uv.png' %}">
+    <title>Baykar Mağaza</title>
+
+    <link rel="stylesheet" href="{% static 'cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' %}"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="{% static 'cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.27/sweetalert2.min.css' %}"
+          integrity="sha512-IScV5kvJo+TIPbxENerxZcEpu9VrLUGh1qYWv6Z9aylhxWE4k4Fch3CHl0IYYmN+jrnWQBPlpoTVoWfSMakoKA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'cdn.baykarmagaza.com/staticv2/css/normalize.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'cdn.baykarmagaza.com/staticv2/css/b-store-final-2.css' %}">
+
+    
+</head>
+
+<body class="bg-lightgray">
+{% include "includes/headerpages.html" %}
+<div class="w-full h-screen" style="
+        background-image: url('{% static 'cdn.baykarmagaza.com/staticv2/img/kizilelma-bg.png' %}');
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        ">
+    
+    <div class="container mx-auto ">
+        <div class="fixed top-20 lg:top-28 bottom-0 left-0 right-0 grid place-items-center overflow-y-auto">
+            <div class="w-full mb-16 md:mx-10 sm:w-4/5 md:w-3/5 lg:w-2/6 h-auto flex flex-col items-center justify-center bg-white rounded-lg pt-4 md:pt-12 pb-4 md:pb-5 p-5">
+                <img src="{% static 'cdn.baykarmagaza.com/media/images/contents/Baykar_magaza_Logo.png' %}" alt="" width="200" class="hidden md:block"/>
+                <div class="my-5 bg-lightgray rounded-lg flex justify-center items-center space-x-2 p-2">
+                    
+                    
+                    
+                        
+                            <a href="{% url "login" %}">
+                                <button class="whitespace-nowrap bg-lightgray rounded-md px-10 sm:px-14 py-3 hover:ring-1 transition-all duration-300 ease-in hover:ring-hoverblue text-hoverblue font-light text-sm"
+                                        id="loginTab">
+                                    Üye Girişi
+                                </button>
+                            </a>
+                            <a>
+                                <button class="whitespace-nowrap bg-hoverblue rounded-md px-10 sm:px-14 py-3 text-white font-light hover:ring-1 hover:ring-hoverblue text-sm transition-all duration-300 ease-in"
+                                        id="registerTab">
+                                    Üye Ol
+                                </button>
+                            </a>
+                        
+                    
+                </div>
+                {% if messages %}
+                {% for i in messages %}
+                <div class="alert alert-{{i.tags}} text-center m-3">
+                  {{i}}
+                </div>
+                {% endfor %}
+                {% endif %}
+    <form method="POST" id="signupForm"><input type="hidden" name="csrfmiddlewaretoken" value="GCQeZhiK8lpj4j4kh9WZegNi5WQSnYwuZLnMbK3yuoKkoqMAHteF82ECTo8PNqn7">
+        {% csrf_token %}
+        <div class="w-full flex flex-col">
+            <div class="flex flex-col my-1 sm:mx-6">
+                <label for="email" class="font-medium text-dark text-md">
+                    E-posta Adresi*
+                </label>
+                <input type="email" name="username" class="rounded-lg bg-lightgray w-full h-12 mt-1 p-3" id="email" required maxlength="320">
+            </div>
+            <div class="relative my-1 sm:mx-6">
+                <label for="password1" class="font-medium text-dark text-md">
+                    Şifre*
+                </label>
+                <input type="password" name="password1" placeholder="" autocomplete="new-password" class="bg-lightgray w-full h-12 p-3 rounded-lg" id="password1" name="password1" required>
+                <span onclick="setPassVisibility('password1')">
+                    <i class="fa-solid p-1 absolute rounded-lg hover:bg-neutral-300 transition-all ease-in duration-300 hover:cursor-pointer top-9 right-4 fa-eye-slash"
+                       id="passIcon"></i>
+                </span>
+            </div>
+            <div class="relative my-4 sm:mx-6" id="password2Content">
+                <label for="password2" class="font-medium text-dark text-md">
+                    Şifre Tekrar*
+                </label>
+                <input type="password" name="password2" placeholder="" autocomplete="new-password" class="bg-lightgray w-full h-12 p-3 rounded-lg" id="password2" name="password2" required>
+                <span onclick="setPassVisibility('password2')">
+                    <i class="fa-solid p-1 absolute rounded-lg hover:bg-neutral-300 transition-all ease-in duration-300 hover:cursor-pointer top-9 right-4 fa-eye-slash"
+                       id="passIcon"></i>
+                </span>
+                <small id="validationError" class="text-red-500"></small>
+            </div>
+            <div class="sm:px-10 my-3" id="kvkk">
+                <small class="tracking-tighter">
+                    <p>Kişisel verileriniz, <a href="#"> Aydınlatma Metni</a> kapsamında işlenmektedir. &ldquo;&Uuml;ye ol&rdquo; veya &ldquo;Sosyal Hesap&rdquo; butonlarından birine basarak <a href="../../legal3/index.html" target="_blank"> &Uuml;yelik S&ouml;zleşmesi</a>&rsquo;ni, <a href="#"> Rıza Metni</a>&rsquo;ni <a href="#"> &Ccedil;erez Politikası</a>&rsquo;nı okuduğunuzu ve kabul ettiğinizi onaylıyorsunuz.</p>
+                </small>
+            </div>
+            <div class="my-3 pb-3 flex justify-center">
+                <button class="bg-hoverblue hover:bg-blue-500 transition-colors w-full sm:w-fit ease-in duration-300 active:bg-blue-600 rounded-md px-20 py-3 text-white font-light text-sm"
+                        id="authAction" type="submit" form="signupForm">
+                    Üye Ol
+                </button>
+            </div>
+        </div>
+    </form>
+
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    
+</div>
+
+<script src="{% static 'code.jquery.com/jquery-3.7.1.min.js' %}"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="{% static 'cdn.jsdelivr.net/npm/alpinejs%402.8.2/dist/alpine.js' %}"></script>
+<script src="{% static 'cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.js' %}"
+        integrity="sha512-6m6AtgVSg7JzStQBuIpqoVuGPVSAK5Sp/ti6ySu6AjRDa1pX8mIl1TwP9QmKXU+4Mhq/73SzOk6mbNvyj9MPzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{% static 'cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.27/sweetalert2.min.js' %}"
+        integrity="sha512-mJQ9oQHzLM2zXe1cwiHmnMddNrmjv1YlaKZe1rM4J7q8JTnNn9UgeJVBV9jyV/lVGdXymVx6odhgwNZjQD8AqA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="{% static 'cdn.baykarmagaza.com/staticv2/js/base.js' %}"></script>
+<script src="{% static 'cdn.baykarmagaza.com/staticv2/js/authentication.js' %}"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        
+    });
+</script>
+<script>
+    function updateSideBasket() {
+        $.ajax({
+            type: 'POST',
+            url: '/tr/checkout/get-side-basket/',
+            headers: {
+                'X-CSRFToken': 'GCQeZhiK8lpj4j4kh9WZegNi5WQSnYwuZLnMbK3yuoKkoqMAHteF82ECTo8PNqn7'
+            },
+            success: function (data) {
+                $('#sideBasketProducts').html(data);
+                let product_count = $('#productCount').attr('data-count')
+                 $('#basketCountWeb').html(product_count)
+                $('#basketCount').html(product_count)
+               
+            },
+            error: function () {
+                Toast.fire({
+                    icon: 'error',
+                    title: 'Beklenmedik bir hata oluştu. Lütfen yeniden deneyiniz.'
+                })
+            }
+        });
+    }
+</script>
+
+<script>
+    function getBasketTotal() {
+        $.ajax({
+            type: 'POST',
+            url: '/tr/checkout/get-basket-total/',
+            headers: {
+                'X-CSRFToken': 'GCQeZhiK8lpj4j4kh9WZegNi5WQSnYwuZLnMbK3yuoKkoqMAHteF82ECTo8PNqn7'
+            },
+            success: function (data) {
+                $('#basketTotal').html(data);
+            },
+            error: function () {
+                Toast.fire({
+                    icon: 'error',
+                    title: 'Beklenmedik bir hata oluştu. Lütfen yeniden deneyiniz.'
+                })
+            }
+        });
+    }
+</script>
+
+<script>
+    function getBasket() {
+        $.ajax({
+            type: 'POST',
+            url: '/tr/checkout/get-basket/',
+            headers: {
+                'X-CSRFToken': 'GCQeZhiK8lpj4j4kh9WZegNi5WQSnYwuZLnMbK3yuoKkoqMAHteF82ECTo8PNqn7'
+            },
+            success: function (data) {
+                $('.basketProducts').html(data);
+            },
+            error: function () {
+                Toast.fire({
+                    icon: 'error',
+                    title: 'Beklenmedik bir hata oluştu. Lütfen yeniden deneyiniz.'
+                })
+            }
+        });
+    }
+</script>
+
+
+<script>
+    function addRemoveBasket(btn, url, id) {
+        let submitBtn = $(btn);
+        submitBtn.prop('disabled', true)
+
+        $.ajax({
+            type: 'POST',
+            url: url,
+            headers: {
+                'X-CSRFToken': 'GCQeZhiK8lpj4j4kh9WZegNi5WQSnYwuZLnMbK3yuoKkoqMAHteF82ECTo8PNqn7'
+            },
+            success: function (response) {
+                fireToastDisable(response, submitBtn)
+                
+                updateSideBasket();
+                submitBtn.parent().find(('input')).val(response.product_quantity);
+                $(`#totalProduct`).html(response.basket_total);
+                submitBtn.parent().parent().parent().find('.price').html(response.total_product_price);
+            },
+            error: function (response) {
+                fireToastDisable(response, submitBtn)
+            }
+        });
+    }
+</script>
+
+<script>
+    function removeFromBasket(url, id) {
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: {id},
+            headers: {
+                'X-CSRFToken': 'GCQeZhiK8lpj4j4kh9WZegNi5WQSnYwuZLnMbK3yuoKkoqMAHteF82ECTo8PNqn7'
+            },
+            success: function (response) {
+                getBasket()
+                getBasketTotal();
+                updateSideBasket();
+                $(`.itemQuantity-${id}`).val(response.product_quantity);
+                $(`#totalProduct`).html(response.basket_total);
+                $(`.productTotalPrice-${id}`).html(response.total_product_price);
+                fireToast(response)
+            },
+            error: function () {
+                Toast.fire({
+                    icon: 'error',
+                    title: 'Beklenmedik bir hata oluştu. Lütfen yeniden deneyiniz.'
+                })
+            }
+        });
+    }
+</script>
+
+</body>
+
+<!-- Mirrored from baykarmagaza.com/tr/account/signup/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Jun 2024 15:38:13 GMT -->
+</html>

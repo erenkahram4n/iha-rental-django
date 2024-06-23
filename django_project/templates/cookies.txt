@@ -1,0 +1,7 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+baykarmagaza.com	TRUE	/	FALSE	1999999999	sessionid	tjk3o0n2fuxeyke4w1z0pgyfwdznnlsp
+baykarmagaza.com	TRUE	/	FALSE	1999999999	django_language	tr
+baykarmagaza.com	TRUE	/	FALSE	1999999999	csrftoken	tjHImDVYwdvbuhSqAusQ4W1uYCs7AC1N
+baykarmagaza.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+

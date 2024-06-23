@@ -1,0 +1,19 @@
+<!-- templates/widgets/bootstrap_datetimepicker.html -->
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/bootstrap-datetimepicker.min.css' %}">
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/moment.min.js' %}"></script>
+<script src="{% static 'js/bootstrap-datetimepicker.min.js' %}"></script>
+
+<script>
+    $(document).ready(function() {
+        $('.datetimepicker-input').datetimepicker({
+            format: 'YYYY-MM-DD HH:mm',  // Kullanacağınız datetime formatını ayarlayın
+            sideBySide: true,
+            useCurrent: false,
+            minDate: new Date()
+        });
+    });
+</script>

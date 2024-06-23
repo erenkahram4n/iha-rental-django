@@ -1,0 +1,79 @@
+{% extends "baykarmagaza.com/tr/product/detail/detail.html" %}
+{% load static %}
+
+{% block title %}Baykar Mağaza | Ürün Yükle{% endblock title %}
+
+{% block style %}
+    .border-input {
+        border: 1px solid #e2e8f0; /* İstediğiniz renk ve kalınlıkta border */
+        padding: 0.5rem; /* Input alanlarının iç boşluğu */
+        border-radius: 0.25rem; /* Köşe yuvarlatma */
+        width: 100%; /* Input alanlarının genişliği */
+    }
+    .btn-submit {
+        width: 100%; /* Butonun %100 genişlikte olması */
+        padding: 0.75rem; /* Buton içerisindeki boşluk */
+        border: 1px solid #2b6cb0; /* İstediğiniz renk ve kalınlıkta border */
+        background-color: #2b6cb0; /* Buton arkaplan rengi */
+        color: #fff; /* Buton yazı rengi */
+        border-radius: 0.25rem; /* Köşe yuvarlatma */
+        transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; /* Geçiş efektleri */
+    }
+    .btn-submit:hover {
+        background-color: #2563eb; /* Hover durumunda arkaplan rengi */
+        border-color: #2563eb; /* Hover durumunda border rengi */
+    }
+{% endblock style %}
+
+{% block content %}
+<div class="max-w-md mx-auto mt-10">
+    <form action="" method="POST" enctype="multipart/form-data" class="p-6 border border-gray-300 rounded-lg shadow-md">
+        {% csrf_token %}
+        <div class="grid grid-cols-1 mt-20 gap-y-4">
+            <label for="{{ form.category.id_for_label }}" class="text-gray-700 font-semibold">Kategori</label>
+            {{ form.category }}
+            {% if form.category.errors %}
+                <div class="text-red-500 text-sm mt-1">{{ form.category.errors }}</div>
+            {% endif %}
+
+            <label for="{{ form.brand.id_for_label }}" class="text-gray-700 font-semibold">Marka</label>
+            {{ form.brand }}
+            {% if form.brand.errors %}
+                <div class="text-red-500 text-sm mt-1">{{ form.brand.errors }}</div>
+            {% endif %}
+
+            <label for="{{ form.model.id_for_label }}" class="text-gray-700 font-semibold">Model</label>
+            {{ form.model }}
+            {% if form.model.errors %}
+                <div class="text-red-500 text-sm mt-1">{{ form.model.errors }}</div>
+            {% endif %}
+
+            <label for="{{ form.weight.id_for_label }}" class="text-gray-700 font-semibold">Ağırlık</label>
+            {{ form.weight }}
+            {% if form.weight.errors %}
+                <div class="text-red-500 text-sm mt-1">{{ form.weight.errors }}</div>
+            {% endif %}
+
+            <label for="{{ form.details.id_for_label }}" class="text-gray-700 font-semibold">Ayrıntılar</label>
+            {{ form.details }}
+            {% if form.details.errors %}
+                <div class="text-red-500 text-sm mt-1">{{ form.details.errors }}</div>
+            {% endif %}
+
+            <label for="{{ form.price.id_for_label }}" class="text-gray-700 font-semibold">Fiyat</label>
+            {{ form.price }}
+            {% if form.price.errors %}
+                <div class="text-red-500 text-sm mt-1">{{ form.price.errors }}</div>
+            {% endif %}
+
+            <label for="{{ form.photo.id_for_label }}" class="text-gray-700 font-semibold">Fotoğraf</label>
+            {{ form.photo }}
+            {% if form.photo.errors %}
+                <div class="text-red-500 text-sm mt-1">{{ form.photo.errors }}</div>
+            {% endif %}
+
+            <button type="submit" class="btn-submit">Ürün Yükle</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}

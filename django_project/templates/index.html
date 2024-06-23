@@ -1,0 +1,2348 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="tr">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NPCVHED5XM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NPCVHED5XM');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    
+    <title>Baykar Mağaza</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="1984’ten bu yana Türkiye’nin teknolojik olarak bağımsızlaşması amacıyla yerli ve milli üretimden yana çalışan Baykar, geçtiğimiz 35 yıl içinde Türkiye’de savunma ve havacılık alanında dönüşüm yaratacak bir ivmenin öncüsü haline geldi. Bugün Baykar olarak, otomotiv endüstrisi için adım attığımız mühendislik girişimimizi yeni kuşak mühendislerimizle gökyüzüne taşıyarak dünyanın sayılı insansız hava aracı üreticilerinden biri olmanın gururunu taşıyoruz. Türkiye’nin ilk yerli ve milli İnsansız Hava Araçlarını üretirken en önemli motivasyonumuz her zaman kendi mühendislerimize ve beyin gücümüze güvenmek oldu. 
+
+Baykar’ın Türk Silahlı Kuvvetleri’nin envanterine giren ve yurt dışına ihraç edilen savunma teknolojilerinin başarısında da sürekli üretim ve geliştirme kültürü öncü rol oynuyor. Sanayi ve Teknoloji Bakanlığı’ndan tescilli Baykar Ar-Ge Merkezi’mizde havacılık arenasında paradigma dönüşümü sağlayacak ileri teknolojileri milli ve özgün olarak tasarlamaya odaklanıyoruz. Sonuç odaklı düşünen ve motivasyonu yüksek ekip ruhumuz; Ar-Ge ve üretim süreçlerinin iç içe geçmesiyle yeni teknolojilerin dinamik bir şekilde uygulanmasını sağlıyor. Tasarlamak, yapmak ve üretmek kadar; askeriyle, sanayicisiyle ve toplumun tüm katmanları tarafından insansız ve otonom teknolojilerin sahiplenilmesi için çalışmalarımızı sürdürüyoruz. 
+
+Kendi finanse ettiği Ar-Ge faaliyetleriyle Türk havacılık ve savunma tarihinde ilklere imza atan ve Türkiye’de %93 yerlilik oranına ulaşan Baykar, İnsansız Hava Araçları alanında  dünya çapında en ileri teknolojik sistemleri geliştirmeye devam etmektedir."/>
+    <meta name="author" content="Baykar Mağaza"/>
+
+
+    <link rel="icon" type="image/x-icon" href="{% static 'cdn.baykarmagaza.com/media/uploads/2024/01/15/vruDUNOsqH2fRBLkopqojjoIgw3gA7Uv.png' %}">
+    <title>Baykar Mağaza</title>
+    <link rel="stylesheet" href="{% static 'cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.css' %}"
+          integrity="sha512-EDXaYrpumQKF+Ic8nuEsgJWBwMOhgwWvNINclFu91nx5VR4MeZ5xlUvyRaYQJTMImwbXSeDjtZMtTs8EB65Z0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="{% static 'cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' %}"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="{% static 'cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.27/sweetalert2.min.css' %}"
+          integrity="sha512-IScV5kvJo+TIPbxENerxZcEpu9VrLUGh1qYWv6Z9aylhxWE4k4Fch3CHl0IYYmN+jrnWQBPlpoTVoWfSMakoKA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'cdn.baykarmagaza.com/staticv2/css/normalize.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'cdn.baykarmagaza.com/staticv2/css/b-store-final-2.css' %}">
+    
+    <script src="{% static 'cdn.baykarmagaza.com/staticv2/smart-selects/admin/js/bindfields.js' %}"></script>
+    <script src="{% static 'cdn.baykarmagaza.com/staticv2/smart-selects/admin/js/chainedfk.js' %}"></script>
+    
+    <style>
+        #aircraft-widgets {
+            background-image: url("{% static 'cdn.baykarmagaza.com/media/uploads/2023/12/15/d0ZBwRmB9xtAMu22jO8omPQ8147zW3eo.png' %}");
+        }
+
+        @media (max-width: 768px) {
+            #aircraft-widgets {
+                background-image: url("{% static 'cdn.baykarmagaza.com/media/uploads/2023/12/15/npU7AdSzE5TMpYhF3pHTRDqrCNde7nOt.png' %}");
+            }
+        }
+    </style>
+
+</head>
+
+{% include "includes/headerhome.html" %}
+
+    <body>
+    <div class="swiper relative bshopMain h-screen overflow-hidden">
+        <div class="swiper-wrapper">
+            
+                <div class="swiper-slide">
+                    <div class="w-full mainSlider h-screen overflow-hidden absolute z-0">
+                        <video autoplay loop muted poster playsinline loading="lazy"
+                               class="w-full h-screen object-cover brightness-[.65]">
+                            <source src="https://cdn.baykarmagaza.com/media/uploads/2023/12/15/Mx0sNe6nroxZY51pYXy555wpeM4nJSmr.mp4" class="object-cover sm:object-fill"
+                                    type="video/mp4"/>
+                        </video>
+                    </div>
+
+                    <div class="w-full h-screen absolute z-20 flex justify-center items-center">
+                        <div class="container px-2 lg:px-20 ">
+                            <div class="sliderContainer my-10 gap-6 text-4xl font-semibold w-full flex flex-col lg:flex-row justify-between items-center">
+                                <div>
+                                    <p class="text-white font-regular text-xs my-2 ml-3">
+                                        “Bizimle Göklere Çıkmaya Hazır Mısın?”
+                                    </p>
+                                    <div>
+                                        
+                                            <div class="mainText bg-primary p-3 flex flex-col justify-center">
+                                                <h3 class="text-white text-3xl sm:text-4xl whitespace-nowrap">
+                                                    BAYRAKTAR KIZILELMA
+                                                </h3>
+                                            </div>
+                                            <p class="text-white flex flex-col text-3xl sm:text-4xl ml-3 my-3 font-semibold">
+                                                ÜRÜNLERİ
+                                            </p>
+                                        
+                                        
+                                            <a href="product/product-list/indexf55d.html?aircraft=3">
+                                                <button class="bg-primary rounded-md text-center min-w-max justify-center w-full lg:w-1/3 flex mt-8 mb-8 md:mb-0 items-center hover:bg-white hover:text-primary hover:border-primary transition-all ease-out duration-300 text-xs text-white px-6 py-3">
+                                                    İNCELE
+                                                    <i class="fa-solid fa-arrow-right ml-2"></i>
+                                                </button>
+                                            </a>
+                                        
+                                    </div>
+                                </div>
+                                <div class="mx-10">
+                                    <img src="{% static 'cdn.baykarmagaza.com/media/uploads/2024/01/04/Q4ZqeaVlc83WL6C9M2aLc3LhktXXwsoL.png' %}" alt="" loading="lazy"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="swiper-slide">
+                    <div class="w-full mainSlider h-screen overflow-hidden absolute z-0">
+                        <video autoplay loop muted poster playsinline loading="lazy"
+                               class="w-full h-screen object-cover brightness-[.65]">
+                            <source src="https://cdn.baykarmagaza.com/media/uploads/2023/12/15/HZ86MFuDZQsXzmyzJh75jhuXl02rjNL7.mp4" class="object-cover sm:object-fill"
+                                    type="video/mp4"/>
+                        </video>
+                    </div>
+
+                    <div class="w-full h-screen absolute z-20 flex justify-center items-center">
+                        <div class="container px-2 lg:px-20 ">
+                            <div class="sliderContainer my-10 gap-6 text-4xl font-semibold w-full flex flex-col lg:flex-row justify-between items-center">
+                                <div>
+                                    <p class="text-white font-regular text-xs my-2 ml-3">
+                                        Tüm gücümüzle milli mücadeleye katkı sunmanın haklı gururu
+                                    </p>
+                                    <div>
+                                        
+                                            <div class="mainText bg-primary p-3 flex flex-col justify-center">
+                                                <h3 class="text-white text-3xl sm:text-4xl whitespace-nowrap">
+                                                    BAYRAKTAR AKINCI
+                                                </h3>
+                                            </div>
+                                            <p class="text-white flex flex-col text-3xl sm:text-4xl ml-3 my-3 font-semibold">
+                                                ÜRÜNLERİ
+                                            </p>
+                                        
+                                        
+                                            <a href="product/product-list/index17bc.html?aircraft=2">
+                                                <button class="bg-primary rounded-md text-center min-w-max justify-center w-full lg:w-1/3 flex mt-8 mb-8 md:mb-0 items-center hover:bg-white hover:text-primary hover:border-primary transition-all ease-out duration-300 text-xs text-white px-6 py-3">
+                                                    İNCELE
+                                                    <i class="fa-solid fa-arrow-right ml-2"></i>
+                                                </button>
+                                            </a>
+                                        
+                                    </div>
+                                </div>
+                                <div class="mx-10">
+                                    <img src="{% static 'cdn.baykarmagaza.com/media/uploads/2024/01/02/BVFM1USWpfS0gTvEPiBNiVz65dh0Afhw.png' %}" alt="" loading="lazy"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="swiper-slide">
+                    <div class="w-full mainSlider h-screen overflow-hidden absolute z-0">
+                        <video autoplay loop muted poster playsinline loading="lazy"
+                               class="w-full h-screen object-cover brightness-[.65]">
+                            <source src="https://cdn.baykarmagaza.com/media/uploads/2023/12/15/kDX4cgmYT72GW3RSnckHdfgtdQt2gSyz.mp4" class="object-cover sm:object-fill"
+                                    type="video/mp4"/>
+                        </video>
+                    </div>
+
+                    <div class="w-full h-screen absolute z-20 flex justify-center items-center">
+                        <div class="container px-2 lg:px-20 ">
+                            <div class="sliderContainer my-10 gap-6 text-4xl font-semibold w-full flex flex-col lg:flex-row justify-between items-center">
+                                <div>
+                                    <p class="text-white font-regular text-xs my-2 ml-3">
+                                        Bizimle Göklerde Parlamaya Hazır Mısın?
+                                    </p>
+                                    <div>
+                                        
+                                            <div class="mainText bg-primary p-3 flex flex-col justify-center">
+                                                <h3 class="text-white text-3xl sm:text-4xl whitespace-nowrap">
+                                                    BAYRAKTAR TB2
+                                                </h3>
+                                            </div>
+                                            <p class="text-white flex flex-col text-3xl sm:text-4xl ml-3 my-3 font-semibold">
+                                                ÜRÜNLERİ
+                                            </p>
+                                        
+                                        
+                                            <a href="product/product-list/index62c7.html?aircraft=1">
+                                                <button class="bg-primary rounded-md text-center min-w-max justify-center w-full lg:w-1/3 flex mt-8 mb-8 md:mb-0 items-center hover:bg-white hover:text-primary hover:border-primary transition-all ease-out duration-300 text-xs text-white px-6 py-3">
+                                                    İNCELE
+                                                    <i class="fa-solid fa-arrow-right ml-2"></i>
+                                                </button>
+                                            </a>
+                                        
+                                    </div>
+                                </div>
+                                <div class="mx-10">
+                                    <img src="{% static 'cdn.baykarmagaza.com/media/uploads/2023/12/09/suaax8x0POEsXjF2eX7jZRMA8BvXUW6Y.png' %}" alt="" loading="lazy"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+        <div class="swiper-pagination mb-12"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <div class="marquee">
+        <div class="marquee__group">
+            
+                
+                    <div class="scrollItem flex items-center">
+                        <img src="https://cdn.baykarmagaza.com/media/uploads/2023/12/09/PCxMt0ffw0FQPg5FrsszGIicZTECBq2q.svg" class="ml-2 mr-4 p-2 w-fit" alt="" loading="lazy"/>
+                        <p class="text-gray font-medium letter-sp tracking-widest text-2xl mx-2 select-none">
+                            SINIRLARI ZORLUYORUZ
+                        </p>
+                    </div>
+                
+            
+                
+                    <div class="scrollItem flex items-center">
+                        <img src="https://cdn.baykarmagaza.com/media/uploads/2023/12/09/PCxMt0ffw0FQPg5FrsszGIicZTECBq2q.svg" class="ml-2 mr-4 p-2 w-fit" alt="" loading="lazy"/>
+                        <p class="text-gray font-medium letter-sp tracking-widest text-2xl mx-2 select-none">
+                            SINIRLARI ZORLUYORUZ
+                        </p>
+                    </div>
+                
+            
+                
+                    <div class="scrollItem flex items-center">
+                        <img src="https://cdn.baykarmagaza.com/media/uploads/2023/12/09/PCxMt0ffw0FQPg5FrsszGIicZTECBq2q.svg" class="ml-2 mr-4 p-2 w-fit" alt="" loading="lazy"/>
+                        <p class="text-gray font-medium letter-sp tracking-widest text-2xl mx-2 select-none">
+                            SINIRLARI ZORLUYORUZ
+                        </p>
+                    </div>
+                
+            
+                
+                    <div class="scrollItem flex items-center">
+                        <img src="https://cdn.baykarmagaza.com/media/uploads/2023/12/09/PCxMt0ffw0FQPg5FrsszGIicZTECBq2q.svg" class="ml-2 mr-4 p-2 w-fit" alt="" loading="lazy"/>
+                        <p class="text-gray font-medium letter-sp tracking-widest text-2xl mx-2 select-none">
+                            SINIRLARI ZORLUYORUZ
+                        </p>
+                    </div>
+                
+            
+                
+                    <div class="scrollItem flex items-center">
+                        <img src="https://cdn.baykarmagaza.com/media/uploads/2023/12/09/PCxMt0ffw0FQPg5FrsszGIicZTECBq2q.svg" class="ml-2 mr-4 p-2 w-fit" alt="" loading="lazy"/>
+                        <p class="text-gray font-medium letter-sp tracking-widest text-2xl mx-2 select-none">
+                            SINIRLARI ZORLUYORUZ
+                        </p>
+                    </div>
+                
+            
+        </div>
+        <div class="marquee__group">
+            
+                
+                    <div class="scrollItem flex items-center">
+                        <img src="https://cdn.baykarmagaza.com/media/uploads/2023/12/09/PCxMt0ffw0FQPg5FrsszGIicZTECBq2q.svg" class="ml-2 mr-4 p-2 w-fit" alt="" loading="lazy"/>
+                        <p class="text-gray font-medium letter-sp tracking-widest text-2xl mx-2 select-none">
+                            SINIRLARI ZORLUYORUZ
+                        </p>
+                    </div>
+                
+            
+                
+                    <div class="scrollItem flex items-center">
+                        <img src="https://cdn.baykarmagaza.com/media/uploads/2023/12/09/PCxMt0ffw0FQPg5FrsszGIicZTECBq2q.svg" class="ml-2 mr-4 p-2 w-fit" alt="" loading="lazy"/>
+                        <p class="text-gray font-medium letter-sp tracking-widest text-2xl mx-2 select-none">
+                            SINIRLARI ZORLUYORUZ
+                        </p>
+                    </div>
+                
+            
+                
+                    <div class="scrollItem flex items-center">
+                        <img src="https://cdn.baykarmagaza.com/media/uploads/2023/12/09/PCxMt0ffw0FQPg5FrsszGIicZTECBq2q.svg" class="ml-2 mr-4 p-2 w-fit" alt="" loading="lazy"/>
+                        <p class="text-gray font-medium letter-sp tracking-widest text-2xl mx-2 select-none">
+                            SINIRLARI ZORLUYORUZ
+                        </p>
+                    </div>
+                
+            
+                
+                    <div class="scrollItem flex items-center">
+                        <img src="https://cdn.baykarmagaza.com/media/uploads/2023/12/09/PCxMt0ffw0FQPg5FrsszGIicZTECBq2q.svg" class="ml-2 mr-4 p-2 w-fit" alt="" loading="lazy"/>
+                        <p class="text-gray font-medium letter-sp tracking-widest text-2xl mx-2 select-none">
+                            SINIRLARI ZORLUYORUZ
+                        </p>
+                    </div>
+                
+            
+                
+                    <div class="scrollItem flex items-center">
+                        <img src="https://cdn.baykarmagaza.com/media/uploads/2023/12/09/PCxMt0ffw0FQPg5FrsszGIicZTECBq2q.svg" class="ml-2 mr-4 p-2 w-fit" alt="" loading="lazy"/>
+                        <p class="text-gray font-medium letter-sp tracking-widest text-2xl mx-2 select-none">
+                            SINIRLARI ZORLUYORUZ
+                        </p>
+                    </div>
+                
+            
+        </div>
+    </div>
+    <div class="productArea w-full pt-2 sm:pt-6 md:pt-12 pb-8 bg-lightgray overflow-hidden">
+        <div class="container mx-auto">
+            <div class="sm:mx-4 md:mx-0 grid grid-cols-1 md:grid-cols-2 items-center gap-4 py-2 sm:py-6 md:py-10">
+                <div class="px-4 md:px-0 lg:pl-20 lg:h-[50%] flex flex-col relative">
+                    <div class="product md:flex-grow w-full md:grid grid-cols-1 lg:grid-cols-2 lg:pr-5">
+                        <div class="pr-4 mb-4">
+                            <h6 class="text-left text-primary font-xs font-bold">
+                                Bizimle Göklere Çıkmaya Hazır Mısın?
+                            </h6>
+                            <p class="text-left text-dark mb-8">
+                                Dünden bugüne tüm gücümüzle milli mücadeleye katkı sunmanın gururunu yaşıyoruz.
+                            </p>
+                            <a href="#" class="text-lightgraye font-semibold" id="prodDetail">
+                                Ürün Detayı Görüntüle
+                            </a>
+                        </div>
+                        <div class="bg-transparent h-[80%] overflow-hidden flex justify-center items-start w-full md:w-auto">
+                            <img id="currentThumbnail" class="w-full object-contain" src="#" alt="" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="w-full flex items-center justify-center overflow-x-clip ">
+                        <div class="smTshirtContent flex justify-center scale-75"></div>
+                    </div>
+                </div>
+                <div class="w-screen sm:w-auto md:w-[50vw] bg-primary bg-no-repeat bg-contain bg-left-bottom font-regular overflow-hidden grid"
+                     style="background-image: url(https://cdn.baykarmagaza.com/staticv2/img/b.svg);">
+                    <div class="px-4 md:px-12 lg:pl-32  overflow-hidden">
+                        <div class="overflow-x-auto">
+                            <div class="productNavs pt-12 flex flex-wrap justify-start items-center gap-x-12 gap-y-4 border-b border-px border-[#040E3E]">
+                            </div>
+                        </div>
+                        <h4 class="text-white my-4 mr-2">
+                            Kategori
+                        </h4>
+                        <div class="categoryContent w-full flex flex-row flex-wrap gap-y-2 gap-x-2"></div>
+                        <div id="activeTab" class="my-4">
+                            <div class="overflow-x-auto" style="scrollbar-gutter: stable;" id="variantsScrollContainer">
+                                <div class="flex space-x-2 py-3 my-3" id="variantsContainer">
+                                </div>
+                            </div>
+                            <p class="font-semibold text-white text-xs my-1 py-4" id="sizeText">
+                                Beden
+                            </p>
+                            <div class="sizeContent space-x-2" id="sizesList"></div>
+                            <div class="cardBottomContent w-[calc(100% - 2rem)] my-10 flex justify-between items-center border-t border-[#040E3E] py-4">
+                                <div class="total flex items-center">
+                                    <img src="https://cdn.baykarmagaza.com/staticv2/img/svg/basket.svg" alt="" loading="lazy">
+                                    <p class="text-white font-semibold text-xl ml-2" id="activeItemPrice"></p>
+                                </div>
+                                <button onclick="addBasket(this, selectedProduct.id, selectedAttribute)"
+                                        class="px-4 py-2 border hover:bg-white hover:text-[#040E3E] transition-colors ease-in duration-300 border-white border-solid rounded-lg text-white ml-10 font-semibold">
+                                    Sepete Ekle
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto my-10 px-2 lg:px-20">
+            <h3 class="my-5 px-2 text-lg font-medium text-dark">
+                Favori Ürünler
+            </h3>
+            <div class="container mx-auto">
+                <div class="flex flex-wrap justify-start">
+                    
+                        <div class="w-full p-1 group xs:w-1/2 md:w-1/3 lg:w-1/5">
+                            <div class="w-full h-full inline-flex flex-col p-5 bg-lightgrayd">
+                                <div class="md:h-40 w-full overflow-hidden flex flex-col items-center justify-center">
+                                    <img class="transition-all ease-in group-hover:scale-105 "
+                                         src="{% static 'cdn.baykarmagaza.com/media/uploads/2024/05/04/wJSWIqtVI9pY8ZO1GD9fmmbJpnlpCNWK.jpg' %}"
+                                         alt="Bayraktar AKINCI POLO YAKA Tişört" loading='lazy'/>
+                                </div>
+                                <div class="mb-5 mt-2">
+                                    <p class="font-medium text-left text-[#8E8E8E] text-sm">
+                                        Bayraktar AKINCI POLO YAKA Tişört
+                                    </p>
+                                </div>
+                                <div class="mt-auto">
+                                    <h6 class="text-end font-semibold text-primary">
+                                        350,00₺
+                                    </h6>
+                                    <a href="product/detail/bayraktar-akinci-polo-yaka-tisort.html">
+                                        <button class="mt-3 w-full">
+                                            <p class="border-solid border-2 relative hover:bg-[#040E3E] hover:text-white transition-all ease-in duration-300 border-primary rounded-md text-center py-1 w-full font-medium text-primary">
+                                                İncele
+                                                <i class="absolute top-3 right-8 hidden text-white fa-solid fa-chevron-right hover:block"></i>
+                                            </p>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="w-full p-1 group xs:w-1/2 md:w-1/3 lg:w-1/5">
+                            <div class="w-full h-full inline-flex flex-col p-5 bg-lightgrayd">
+                                <div class="md:h-40 w-full overflow-hidden flex flex-col items-center justify-center">
+                                    <img class="transition-all ease-in group-hover:scale-105 "
+                                         src="{% static 'cdn.baykarmagaza.com/media/upload/userFormUpload/RmzpOYU46kzKXb9pqjxSegD9F55RALew.jpg' %}"
+                                         alt="1/72 Ölçek Bayraktar AKINCI Maket" loading='lazy'/>
+                                </div>
+                                <div class="mb-5 mt-2">
+                                    <p class="font-medium text-left text-[#8E8E8E] text-sm">
+                                        1/72 Ölçek Bayraktar AKINCI Maket
+                                    </p>
+                                </div>
+                                <div class="mt-auto">
+                                    <h6 class="text-end font-semibold text-primary">
+                                        1500,00₺
+                                    </h6>
+                                    <a href="product/detail/172-olcek-bayraktar-akinci-maket.html">
+                                        <button class="mt-3 w-full">
+                                            <p class="border-solid border-2 relative hover:bg-[#040E3E] hover:text-white transition-all ease-in duration-300 border-primary rounded-md text-center py-1 w-full font-medium text-primary">
+                                                İncele
+                                                <i class="absolute top-3 right-8 hidden text-white fa-solid fa-chevron-right hover:block"></i>
+                                            </p>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="w-full p-1 group xs:w-1/2 md:w-1/3 lg:w-1/5">
+                            <div class="w-full h-full inline-flex flex-col p-5 bg-lightgrayd">
+                                <div class="md:h-40 w-full overflow-hidden flex flex-col items-center justify-center">
+                                    <img class="transition-all ease-in group-hover:scale-105 "
+                                         src="{% static 'cdn.baykarmagaza.com/media/upload/userFormUpload/Dsny5Vxu2liGqzxcJs2sXxIzJdlg50Ay.jpg' %}"
+                                         alt="1/48 Ölçek Bayraktar TB2 Maket" loading='lazy'/>
+                                </div>
+                                <div class="mb-5 mt-2">
+                                    <p class="font-medium text-left text-[#8E8E8E] text-sm">
+                                        1/48 Ölçek Bayraktar TB2 Maket
+                                    </p>
+                                </div>
+                                <div class="mt-auto">
+                                    <h6 class="text-end font-semibold text-primary">
+                                        1000,00₺
+                                    </h6>
+                                    <a href="product/detail/148-olcek-bayraktar-tb2-maket.html">
+                                        <button class="mt-3 w-full">
+                                            <p class="border-solid border-2 relative hover:bg-[#040E3E] hover:text-white transition-all ease-in duration-300 border-primary rounded-md text-center py-1 w-full font-medium text-primary">
+                                                İncele
+                                                <i class="absolute top-3 right-8 hidden text-white fa-solid fa-chevron-right hover:block"></i>
+                                            </p>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="w-full p-1 group xs:w-1/2 md:w-1/3 lg:w-1/5">
+                            <div class="w-full h-full inline-flex flex-col p-5 bg-lightgrayd">
+                                <div class="md:h-40 w-full overflow-hidden flex flex-col items-center justify-center">
+                                    <img class="transition-all ease-in group-hover:scale-105 "
+                                         src="{% static 'cdn.baykarmagaza.com/media/upload/userFormUpload/2oeo99GDwZ3cPOPUY2DoZfIq2XLil17w.jpg' %}"
+                                         alt="Bayraktar AKINCI Siyah Tişört" loading='lazy'/>
+                                </div>
+                                <div class="mb-5 mt-2">
+                                    <p class="font-medium text-left text-[#8E8E8E] text-sm">
+                                        Bayraktar AKINCI Siyah Tişört
+                                    </p>
+                                </div>
+                                <div class="mt-auto">
+                                    <h6 class="text-end font-semibold text-primary">
+                                        300,00₺
+                                    </h6>
+                                    <a href="product/detail/bayraktar-akinci-siyah-tisort.html">
+                                        <button class="mt-3 w-full">
+                                            <p class="border-solid border-2 relative hover:bg-[#040E3E] hover:text-white transition-all ease-in duration-300 border-primary rounded-md text-center py-1 w-full font-medium text-primary">
+                                                İncele
+                                                <i class="absolute top-3 right-8 hidden text-white fa-solid fa-chevron-right hover:block"></i>
+                                            </p>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="w-full p-1 group xs:w-1/2 md:w-1/3 lg:w-1/5">
+                            <div class="w-full h-full inline-flex flex-col p-5 bg-lightgrayd">
+                                <div class="md:h-40 w-full overflow-hidden flex flex-col items-center justify-center">
+                                    <img class="transition-all ease-in group-hover:scale-105 "
+                                         src="{% static 'cdn.baykarmagaza.com/media/upload/userFormUpload/6EflTGWjY3CzEL45hyVYMdC4cMqu03An.jpg' %}"
+                                         alt="Bayraktar AKINCI Şapka" loading='lazy'/>
+                                </div>
+                                <div class="mb-5 mt-2">
+                                    <p class="font-medium text-left text-[#8E8E8E] text-sm">
+                                        Bayraktar AKINCI Şapka
+                                    </p>
+                                </div>
+                                <div class="mt-auto">
+                                    <h6 class="text-end font-semibold text-primary">
+                                        160,00₺
+                                    </h6>
+                                    <a href="product/detail/bayraktar-akinci-sapka.html">
+                                        <button class="mt-3 w-full">
+                                            <p class="border-solid border-2 relative hover:bg-[#040E3E] hover:text-white transition-all ease-in duration-300 border-primary rounded-md text-center py-1 w-full font-medium text-primary">
+                                                İncele
+                                                <i class="absolute top-3 right-8 hidden text-white fa-solid fa-chevron-right hover:block"></i>
+                                            </p>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="w-full p-1 group xs:w-1/2 md:w-1/3 lg:w-1/5">
+                            <div class="w-full h-full inline-flex flex-col p-5 bg-lightgrayd">
+                                <div class="md:h-40 w-full overflow-hidden flex flex-col items-center justify-center">
+                                    <img class="transition-all ease-in group-hover:scale-105 "
+                                         src="{% static 'cdn.baykarmagaza.com/media/upload/userFormUpload/4w8ghapTfNliVbqTgG8pTu6ZFn4nQyXi.jpg' %}"
+                                         alt="Bayraktar KIZILELMA Şapka" loading='lazy'/>
+                                </div>
+                                <div class="mb-5 mt-2">
+                                    <p class="font-medium text-left text-[#8E8E8E] text-sm">
+                                        Bayraktar KIZILELMA Şapka
+                                    </p>
+                                </div>
+                                <div class="mt-auto">
+                                    <h6 class="text-end font-semibold text-primary">
+                                        160,00₺
+                                    </h6>
+                                    <a href="product/detail/bayraktar-kizilelma-sapka.html">
+                                        <button class="mt-3 w-full">
+                                            <p class="border-solid border-2 relative hover:bg-[#040E3E] hover:text-white transition-all ease-in duration-300 border-primary rounded-md text-center py-1 w-full font-medium text-primary">
+                                                İncele
+                                                <i class="absolute top-3 right-8 hidden text-white fa-solid fa-chevron-right hover:block"></i>
+                                            </p>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="w-full p-1 group xs:w-1/2 md:w-1/3 lg:w-1/5">
+                            <div class="w-full h-full inline-flex flex-col p-5 bg-lightgrayd">
+                                <div class="md:h-40 w-full overflow-hidden flex flex-col items-center justify-center">
+                                    <img class="transition-all ease-in group-hover:scale-105 "
+                                         src="{% static 'cdn.baykarmagaza.com/media/uploads/2024/06/20/zydAdNJ2KJn9IZC22RVCcRRAZk17IsVX.jpg' %}"
+                                         alt="Türkçe Kırmızı Bayraktar AKINCI Anahtarlık" loading='lazy'/>
+                                </div>
+                                <div class="mb-5 mt-2">
+                                    <p class="font-medium text-left text-[#8E8E8E] text-sm">
+                                        Türkçe Kırmızı Bayraktar AKINCI Anahtarlık
+                                    </p>
+                                </div>
+                                <div class="mt-auto">
+                                    <h6 class="text-end font-semibold text-primary">
+                                        50,00₺
+                                    </h6>
+                                    <a href="product/detail/turkce-krmz-bayraktar-akinci-anahtarlk.html">
+                                        <button class="mt-3 w-full">
+                                            <p class="border-solid border-2 relative hover:bg-[#040E3E] hover:text-white transition-all ease-in duration-300 border-primary rounded-md text-center py-1 w-full font-medium text-primary">
+                                                İncele
+                                                <i class="absolute top-3 right-8 hidden text-white fa-solid fa-chevron-right hover:block"></i>
+                                            </p>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="w-full p-1 group xs:w-1/2 md:w-1/3 lg:w-1/5">
+                            <div class="w-full h-full inline-flex flex-col p-5 bg-lightgrayd">
+                                <div class="md:h-40 w-full overflow-hidden flex flex-col items-center justify-center">
+                                    <img class="transition-all ease-in group-hover:scale-105 "
+                                         src="{% static 'cdn.baykarmagaza.com/media/uploads/2024/06/20/sxbECsanMt0p8Ac0YyXIWcZtv004gFQL.jpg' %}"
+                                         alt="İngilizce Siyah Bayraktar KIZILELMA Anahtarlık" loading='lazy'/>
+                                </div>
+                                <div class="mb-5 mt-2">
+                                    <p class="font-medium text-left text-[#8E8E8E] text-sm">
+                                        İngilizce Siyah Bayraktar KIZILELMA Anahtarlık
+                                    </p>
+                                </div>
+                                <div class="mt-auto">
+                                    <h6 class="text-end font-semibold text-primary">
+                                        50,00₺
+                                    </h6>
+                                    <a href="product/detail/ingilizce-siyah-bayraktar-kizilelma-anahtarlk.html">
+                                        <button class="mt-3 w-full">
+                                            <p class="border-solid border-2 relative hover:bg-[#040E3E] hover:text-white transition-all ease-in duration-300 border-primary rounded-md text-center py-1 w-full font-medium text-primary">
+                                                İncele
+                                                <i class="absolute top-3 right-8 hidden text-white fa-solid fa-chevron-right hover:block"></i>
+                                            </p>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="w-full p-1 group xs:w-1/2 md:w-1/3 lg:w-1/5">
+                            <div class="w-full h-full inline-flex flex-col p-5 bg-lightgrayd">
+                                <div class="md:h-40 w-full overflow-hidden flex flex-col items-center justify-center">
+                                    <img class="transition-all ease-in group-hover:scale-105 "
+                                         src="{% static 'cdn.baykarmagaza.com/media/upload/userFormUpload/WFzbSgxOLRHELFmQmkbucspTwHQMC8hM.jpg' %}"
+                                         alt="Bayraktar AKINCI POLO YAKA Çocuk Tişört" loading='lazy'/>
+                                </div>
+                                <div class="mb-5 mt-2">
+                                    <p class="font-medium text-left text-[#8E8E8E] text-sm">
+                                        Bayraktar AKINCI POLO YAKA Çocuk Tişört
+                                    </p>
+                                </div>
+                                <div class="mt-auto">
+                                    <h6 class="text-end font-semibold text-primary">
+                                        200,00₺
+                                    </h6>
+                                    <a href="product/detail/bayraktar-akinci-polo-yaka-cocuk-tisort.html">
+                                        <button class="mt-3 w-full">
+                                            <p class="border-solid border-2 relative hover:bg-[#040E3E] hover:text-white transition-all ease-in duration-300 border-primary rounded-md text-center py-1 w-full font-medium text-primary">
+                                                İncele
+                                                <i class="absolute top-3 right-8 hidden text-white fa-solid fa-chevron-right hover:block"></i>
+                                            </p>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="w-full p-1 group xs:w-1/2 md:w-1/3 lg:w-1/5">
+                            <div class="w-full h-full inline-flex flex-col p-5 bg-lightgrayd">
+                                <div class="md:h-40 w-full overflow-hidden flex flex-col items-center justify-center">
+                                    <img class="transition-all ease-in group-hover:scale-105 "
+                                         src="{% static 'cdn.baykarmagaza.com/media/upload/userFormUpload/afGoNvgzDxu0eKfN3eYnAx6RJsbf61ka.jpg' %}"
+                                         alt="1/32 Ölçek Bayraktar AKINCI Maket" loading='lazy'/>
+                                </div>
+                                <div class="mb-5 mt-2">
+                                    <p class="font-medium text-left text-[#8E8E8E] text-sm">
+                                        1/32 Ölçek Bayraktar AKINCI Maket
+                                    </p>
+                                </div>
+                                <div class="mt-auto">
+                                    <h6 class="text-end font-semibold text-primary">
+                                        3350,00₺
+                                    </h6>
+                                    <a href="product/detail/132-olcek-bayraktar-akinci-maket.html">
+                                        <button class="mt-3 w-full">
+                                            <p class="border-solid border-2 relative hover:bg-[#040E3E] hover:text-white transition-all ease-in duration-300 border-primary rounded-md text-center py-1 w-full font-medium text-primary">
+                                                İncele
+                                                <i class="absolute top-3 right-8 hidden text-white fa-solid fa-chevron-right hover:block"></i>
+                                            </p>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full px-5 sm:px-10 py-14 bottomImg" id="aircraft-widgets">
+        <div class="container mx-auto">
+            <div class="grid lg:px-[5rem] md:grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-2 md:gap-5">
+                <div class="prodCategoriesDiv flex flex-col justify-center">
+                    <h3 class="text-sm font-semibold text-white text-left">
+                        Milli Teknoloji Hamlesi<br>Öncüsü BAYKAR
+                    </h3>
+                    <p>Baykar, teknoloji &uuml;reten bir T&uuml;rkiye hedefiyle, Milli Teknoloji Hamlesi<br />
+kapsamında hem toplumsal hem de profesyonel alanda yetişmiş insan<br />
+ve yetkinlik kapasitesini arttırmak i&ccedil;in desteklerine devam etmektedir.</p>
+                    <a href="product/product-list/index.html" class="w-40 h-9 mt-4">
+                        <button class="w-40 border border-white rounded-md py-2 text-white font-medium text-[12px]">
+                            Tüm Ürünler
+                        </button>
+                    </a>
+                </div>
+
+                <div class="flex flex-wrap row-auto ">
+                    
+                        
+                            <div class="w-full p-2 sm:w-1/2 md:w-1/3 min-h-[10rem] sm:min-h-[7.5rem] lg:min-h-[10rem]">
+                                <a href="product/product-list/index62c7.html?aircraft=1"
+                                   class="grid min-w-full min-h-full text-sm font-medium text-white">
+                                    <div class="flex flex-col items-center justify-center lg:gap-6 rounded-lg bg-black bg-opacity-40 p-4 backdrop-blur-sm transition-all duration-300 ease-in group hover:cursor-pointer hover:bg-opacity-60">
+                                        <div class="md:min-h-12 !h-fit w-full flex justify-center items-start ">
+                                            <img src="{% static 'cdn.baykarmagaza.com/media/uploads/2023/12/09/1XNxWXVHOyL5HiZPL39zUnbbuF2btS0z.png' %}"
+                                                 class="object-contain min-h-12 h-16 !min-w-[80px] w-1/3 md:w-2/3 transition-all ease-out duration-300"
+                                                 alt="" loading="lazy"/>
+                                        </div>
+                                        <div class="w-full flex flex-grow items-start relative mt-4">
+                                            <p class="w-full pr-3 text-xs">
+                                                Bayraktar TB2 Ürünleri
+                                            </p>
+                                            <i class="absolute bottom-1 right-0 text-white opacity-0 transition-all duration-300 ease-in fa-solid fa-chevron-right group-hover:opacity-100 "></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        
+                    
+                        
+                            <div class="w-full p-2 sm:w-1/2 md:w-1/3 min-h-[10rem] sm:min-h-[7.5rem] lg:min-h-[10rem]">
+                                <a href="product/product-list/index17bc.html?aircraft=2"
+                                   class="grid min-w-full min-h-full text-sm font-medium text-white">
+                                    <div class="flex flex-col items-center justify-center lg:gap-6 rounded-lg bg-black bg-opacity-40 p-4 backdrop-blur-sm transition-all duration-300 ease-in group hover:cursor-pointer hover:bg-opacity-60">
+                                        <div class="md:min-h-12 !h-fit w-full flex justify-center items-start ">
+                                            <img src="{% static 'cdn.baykarmagaza.com/media/uploads/2023/12/09/bd3uzwMcygECpcRoiA06ceVBScFL1AVs.png' %}"
+                                                 class="object-contain min-h-12 h-16 !min-w-[80px] w-1/3 md:w-2/3 transition-all ease-out duration-300"
+                                                 alt="" loading="lazy"/>
+                                        </div>
+                                        <div class="w-full flex flex-grow items-start relative mt-4">
+                                            <p class="w-full pr-3 text-xs">
+                                                Bayraktar AKINCI Ürünleri
+                                            </p>
+                                            <i class="absolute bottom-1 right-0 text-white opacity-0 transition-all duration-300 ease-in fa-solid fa-chevron-right group-hover:opacity-100 "></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        
+                    
+                        
+                            <div class="w-full p-2 sm:w-1/2 md:w-1/3 min-h-[10rem] sm:min-h-[7.5rem] lg:min-h-[10rem]">
+                                <a href="product/product-list/indexf55d.html?aircraft=3"
+                                   class="grid min-w-full min-h-full text-sm font-medium text-white">
+                                    <div class="flex flex-col items-center justify-center lg:gap-6 rounded-lg bg-black bg-opacity-40 p-4 backdrop-blur-sm transition-all duration-300 ease-in group hover:cursor-pointer hover:bg-opacity-60">
+                                        <div class="md:min-h-12 !h-fit w-full flex justify-center items-start ">
+                                            <img src="{% static 'cdn.baykarmagaza.com/media/uploads/2023/12/09/bO310cg5cEd3fKBL1dNniy1qeifSY5Ts.png' %}"
+                                                 class="object-contain min-h-12 h-16 !min-w-[80px] w-1/3 md:w-2/3 transition-all ease-out duration-300"
+                                                 alt="" loading="lazy"/>
+                                        </div>
+                                        <div class="w-full flex flex-grow items-start relative mt-4">
+                                            <p class="w-full pr-3 text-xs">
+                                                Bayraktar KIZILELMA Ürünleri
+                                            </p>
+                                            <i class="absolute bottom-1 right-0 text-white opacity-0 transition-all duration-300 ease-in fa-solid fa-chevron-right group-hover:opacity-100 "></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        
+                    
+                        
+                            <div class="w-full p-2 sm:w-1/2 md:w-1/3 min-h-[10rem] sm:min-h-[7.5rem] lg:min-h-[10rem]">
+                                <a href="product/product-list/indexdf4d.html?aircraft=4"
+                                   class="grid min-w-full min-h-full text-sm font-medium text-white">
+                                    <div class="flex flex-col items-center justify-center lg:gap-6 rounded-lg bg-black bg-opacity-40 p-4 backdrop-blur-sm transition-all duration-300 ease-in group hover:cursor-pointer hover:bg-opacity-60">
+                                        <div class="md:min-h-12 !h-fit w-full flex justify-center items-start ">
+                                            <img src="{% static 'cdn.baykarmagaza.com/media/uploads/2024/01/02/ocBNGDHyQMiS231wAeAQLdNOk0iN3EQq.png' %}"
+                                                 class="object-contain min-h-12 h-16 !min-w-[80px] w-1/3 md:w-2/3 transition-all ease-out duration-300"
+                                                 alt="" loading="lazy"/>
+                                        </div>
+                                        <div class="w-full flex flex-grow items-start relative mt-4">
+                                            <p class="w-full pr-3 text-xs">
+                                                Bayraktar TB3 Ürünleri
+                                            </p>
+                                            <i class="absolute bottom-1 right-0 text-white opacity-0 transition-all duration-300 ease-in fa-solid fa-chevron-right group-hover:opacity-100 "></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        
+                    
+                        
+                            <div class="w-full p-2 sm:w-1/2 md:w-1/3 min-h-[10rem] sm:min-h-[7.5rem] lg:min-h-[10rem]">
+                                <a href="product/product-list/index2cf8.html?aircraft=5"
+                                   class="grid min-w-full min-h-full text-sm font-medium text-white">
+                                    <div class="flex flex-col items-center justify-center lg:gap-6 rounded-lg bg-black bg-opacity-40 p-4 backdrop-blur-sm transition-all duration-300 ease-in group hover:cursor-pointer hover:bg-opacity-60">
+                                        <div class="md:min-h-12 !h-fit w-full flex justify-center items-start ">
+                                            <img src="{% static 'cdn.baykarmagaza.com/media/uploads/2023/12/09/8JM0lLfcARP6qOVstFn5PXPqvzmjxsNq.png' %}"
+                                                 class="object-contain min-h-12 h-16 !min-w-[80px] w-1/3 md:w-2/3 transition-all ease-out duration-300"
+                                                 alt="" loading="lazy"/>
+                                        </div>
+                                        <div class="w-full flex flex-grow items-start relative mt-4">
+                                            <p class="w-full pr-3 text-xs">
+                                                Bayraktar DİHA Ürünleri
+                                            </p>
+                                            <i class="absolute bottom-1 right-0 text-white opacity-0 transition-all duration-300 ease-in fa-solid fa-chevron-right group-hover:opacity-100 "></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        
+                    
+                        
+                            <div class="w-full p-2 sm:w-1/2 md:w-1/3 min-h-[10rem] sm:min-h-[7.5rem] lg:min-h-[10rem]">
+                                <a href="product/product-list/index52c7.html?aircraft=6"
+                                   class="grid min-w-full min-h-full text-sm font-medium text-white">
+                                    <div class="flex flex-col items-center justify-center lg:gap-6 rounded-lg bg-black bg-opacity-40 p-4 backdrop-blur-sm transition-all duration-300 ease-in group hover:cursor-pointer hover:bg-opacity-60">
+                                        <div class="md:min-h-12 !h-fit w-full flex justify-center items-start ">
+                                            <img src="{% static 'cdn.baykarmagaza.com/media/uploads/2023/12/13/VcobDFphDMKts7wbhn6iik4yYB3ac2vU.png' %}"
+                                                 class="object-contain min-h-12 h-16 !min-w-[80px] w-1/3 md:w-2/3 transition-all ease-out duration-300"
+                                                 alt="" loading="lazy"/>
+                                        </div>
+                                        <div class="w-full flex flex-grow items-start relative mt-4">
+                                            <p class="w-full pr-3 text-xs">
+                                                Bayraktar Mini İHA Ürünleri
+                                            </p>
+                                            <i class="absolute bottom-1 right-0 text-white opacity-0 transition-all duration-300 ease-in fa-solid fa-chevron-right group-hover:opacity-100 "></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        
+                    
+                        
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container sm:px-2 lg:px-20 mx-auto py-4 md:py-10">
+    <div id="service_container" class="max-w-full flex flex-col sm:flex-row flex-wrap items-center gap-y-4 justify-center">
+        
+            <div class="mx-6 md:mx-8 my-2 flex flex-col items-center md:my-0 lg:mx-16 text-center">
+                <div class="h-6 w-full flex items-start justify-center"><img src="https://cdn.baykarmagaza.com/media/uploads/2023/12/09/xVWebkULaBh9kxxNunbY5nBZ9fxFwhFK.svg" alt="" class="h-full" loading="lazy"/></div>
+                <h3 class="my-1 text-center font-bold text-primary whitespace-nowrap">
+                    Güvenli Alışveriş
+                </h3>
+                <p class="text-center text-xs font-medium text-lightgrayg w-44">
+                    SSL Sertifikası ile %100 güvenli alışveriş imkanı
+                </p>
+            </div>
+            
+                <div class="hidden md:block h-8 my-auto w-px rounded-md bg-lightgraye"></div>
+            
+        
+            <div class="mx-6 md:mx-8 my-2 flex flex-col items-center md:my-0 lg:mx-16 text-center">
+                <div class="h-6 w-full flex items-start justify-center"><img src="https://cdn.baykarmagaza.com/media/uploads/2023/12/09/jBfB9uhIhlxGylUVEdzS6WxYdUHnf2c6.svg" alt="" class="h-full" loading="lazy"/></div>
+                <h3 class="my-1 text-center font-bold text-primary whitespace-nowrap">
+                    Müşteri Hizmetleri
+                </h3>
+                <p class="text-center text-xs font-medium text-lightgrayg w-44">
+                    Tüm ürünlerimizde ürün garantisi mevcuttur
+                </p>
+            </div>
+            
+                <div class="hidden md:block h-8 my-auto w-px rounded-md bg-lightgraye"></div>
+            
+        
+            <div class="mx-6 md:mx-8 my-2 flex flex-col items-center md:my-0 lg:mx-16 text-center">
+                <div class="h-6 w-full flex items-start justify-center"><img src="https://cdn.baykarmagaza.com/media/uploads/2023/12/09/p8AxjNxYLWdRZnoDRHNhjsrVjbm0BwbH.svg" alt="" class="h-full" loading="lazy"/></div>
+                <h3 class="my-1 text-center font-bold text-primary whitespace-nowrap">
+                    Hızlı Kargo
+                </h3>
+                <p class="text-center text-xs font-medium text-lightgrayg w-44">
+                    Siparişleriniz 3 iş günü içerisinde kargoya verilir
+                </p>
+            </div>
+            
+        
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var serviceContainer = document.getElementById('service_container');
+        var children = serviceContainer.children;
+    
+        for (var i = 0; i < children.length; i++) {
+            var child = children[i];
+            var rect = child.getBoundingClientRect();
+            var centerY = rect.top + rect.height / 2;
+        }
+    });
+    
+    function adjustVisibilityBasedOnCenterY() {
+        let md = 768;
+        if (window.innerWidth  < md) return
+        var serviceContainer = document.getElementById('service_container');
+        var children = serviceContainer.children;
+    
+        for (var i = 0; i < children.length - 1; i++) {
+            var currentChild = children[i];
+            var nextChild = children[i + 1];
+    
+            var currentRect = currentChild.getBoundingClientRect();
+            var nextRect = nextChild.getBoundingClientRect();
+    
+            var currentCenterY = currentRect.top + currentRect.height / 2;
+            var nextCenterY = nextRect.top + nextRect.height / 2;
+    
+            if (currentCenterY !== nextCenterY) {
+                currentChild.style.display = 'none';
+            } else {
+                currentChild.style.display = 'block'; 
+            }
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', adjustVisibilityBasedOnCenterY);
+    document.addEventListener('resize', adjustVisibilityBasedOnCenterY);
+</script>
+{% include "includes/footer.html" %}
+<script src="{% static 'code.jquery.com/jquery-3.7.1.min.js' %}"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="{% static 'cdn.jsdelivr.net/npm/inputmask%405.0.9-beta.36/dist/jquery.inputmask.min.js' %}"></script>
+<script src="{% static 'cdn.jsdelivr.net/npm/alpinejs%403.13.2/dist/cdn.min.js' %}" integrity="sha256-MAnclv071ggEnpQbfWW6weXXKd5wErU2fZ6yuDYvdPE=" crossorigin="anonymous"></script>
+<script src="{% static 'cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.27/sweetalert2.min.js' %}"
+        integrity="sha512-mJQ9oQHzLM2zXe1cwiHmnMddNrmjv1YlaKZe1rM4J7q8JTnNn9UgeJVBV9jyV/lVGdXymVx6odhgwNZjQD8AqA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{% static 'cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js' %}"
+        integrity="sha512-QwpsxtdZRih55GaU/Ce2Baqoy2tEv9GltjAG8yuTy2k9lHqK7VHHp3wWWe+yITYKZlsT3AaCj49ZxMYPp46iJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{% static 'cdn.baykarmagaza.com/staticv2/js/base.js' %}"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        
+    });
+</script>
+
+<script>
+    function addFavorites(btn, product_id) {
+        let submitBtn = $(btn)
+        submitBtn.prop('disabled', true);
+
+        $.ajax({
+            type: 'POST',
+            url: '/tr/product/add/favorite/list/',
+            data: {product_id},
+            headers: {
+                'X-CSRFToken': 'ney5tIBOw2BFMbmzjGaxEE38oYzz0ipgGn5DFbmCS5WG6i4PJ0sdyqUscqRwqKgT'
+            },
+            success: function (response) {
+                
+                $(`#fav-${product_id}`).toggleClass('deactiveHeart activeHeart')
+                fireToastDisable(response, submitBtn)
+
+                
+                
+                
+            },
+            error: function (response) {
+                fireToastDisable(response, submitBtn)
+            }
+        });
+    }
+</script>
+
+<script>
+    function updateSideBasket() {
+        $.ajax({
+            type: 'POST',
+            url: '/tr/checkout/get-side-basket/',
+            headers: {
+                'X-CSRFToken': 'ney5tIBOw2BFMbmzjGaxEE38oYzz0ipgGn5DFbmCS5WG6i4PJ0sdyqUscqRwqKgT'
+            },
+            success: function (data) {
+                $('#sideBasketProducts').html(data);
+                let product_count = $('#productCount').attr('data-count')
+                 $('#basketCountWeb').html(product_count)
+                $('#basketCount').html(product_count)
+                 
+            },
+            error: function () {
+                Toast.fire({
+                    icon: 'error',
+                    title: 'Beklenmedik bir hata oluştu. Lütfen yeniden deneyiniz.'
+                })
+            }
+        });
+    }
+</script>
+
+<script>
+    function getBasketTotal() {
+        $.ajax({
+            type: 'POST',
+            url: '/tr/checkout/get-basket-total/',
+            headers: {
+                'X-CSRFToken': 'ney5tIBOw2BFMbmzjGaxEE38oYzz0ipgGn5DFbmCS5WG6i4PJ0sdyqUscqRwqKgT'
+            },
+            success: function (data) {
+                $('#basketTotal').html(data);
+            },
+            error: function () {
+                Toast.fire({
+                    icon: 'error',
+                    title: 'Beklenmedik bir hata oluştu. Lütfen yeniden deneyiniz.'
+                })
+            }
+        });
+    }
+</script>
+
+<script>
+    function getBasket() {
+        $.ajax({
+            type: 'POST',
+            url: '/tr/checkout/get-basket/',
+            headers: {
+                'X-CSRFToken': 'ney5tIBOw2BFMbmzjGaxEE38oYzz0ipgGn5DFbmCS5WG6i4PJ0sdyqUscqRwqKgT'
+            },
+            success: function (data) {
+                $('.basketProducts').html(data);
+            },
+            error: function () {
+                Toast.fire({
+                    icon: 'error',
+                    title: 'Beklenmedik bir hata oluştu. Lütfen yeniden deneyiniz.'
+                })
+            }
+        });
+    }
+</script>
+
+
+<script>
+    function addRemoveBasket(btn, url, id) {
+        let submitBtn = $(btn);
+        submitBtn.prop('disabled', true)
+
+        $.ajax({
+            type: 'POST',
+            url: url,
+            headers: {
+                'X-CSRFToken': 'ney5tIBOw2BFMbmzjGaxEE38oYzz0ipgGn5DFbmCS5WG6i4PJ0sdyqUscqRwqKgT'
+            },
+            success: function (response) {
+                fireToastDisable(response, submitBtn)
+                
+                updateSideBasket();
+                submitBtn.parent().find(('input')).val(response.product_quantity);
+                $(`#totalProduct`).html(response.basket_total);
+                submitBtn.parent().parent().parent().find('.price').html(response.total_product_price);
+            },
+            error: function (response) {
+                fireToastDisable(response, submitBtn)
+            }
+        });
+    }
+</script>
+
+<script>
+    function removeFromBasket(url, id) {
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: {id},
+            headers: {
+                'X-CSRFToken': 'ney5tIBOw2BFMbmzjGaxEE38oYzz0ipgGn5DFbmCS5WG6i4PJ0sdyqUscqRwqKgT'
+            },
+            success: function (response) {
+                getBasket()
+                getBasketTotal();
+                updateSideBasket();
+                $(`.itemQuantity-${id}`).val(response.product_quantity);
+                $(`#totalProduct`).html(response.basket_total);
+                $(`.productTotalPrice-${id}`).html(response.total_product_price);
+                fireToast(response)
+            },
+            error: function () {
+                Toast.fire({
+                    icon: 'error',
+                    title: 'Beklenmedik bir hata oluştu. Lütfen yeniden deneyiniz.'
+                })
+            }
+        });
+    }
+</script>
+
+<script>
+    function addBasket(btn, id, attribute) {
+        let submitBtn = $(btn)
+
+        $.ajax({
+            type: 'POST',
+            url: '/tr/checkout/add-to-cart/',
+            data: {'product_id': id, 'select_attributes': attribute, 'product_quantity': 1},
+            headers: {
+                'X-CSRFToken': 'ney5tIBOw2BFMbmzjGaxEE38oYzz0ipgGn5DFbmCS5WG6i4PJ0sdyqUscqRwqKgT'
+            },
+            success: function (response) {
+                updateSideBasket()
+                fireToastDisable(response, submitBtn)
+            },
+            error: function (response) {
+                fireToastDisable(response, submitBtn)
+            }
+        });
+    }
+</script>
+
+<script src="{% static 'cdn.baykarmagaza.com/staticv2/js/account.js' %}"></script>
+<script>
+    function goToTop() {
+        window.scrollTo(0, 0);
+    }
+</script>
+<script>
+    function getAddresses() {
+        $.ajax({
+            url: "/tr/accounts/get-addresses",
+            success: function (data) {
+                $('#userAddresses').html(data);
+                goToTop();
+            },
+            error: function (response) {
+                if (response.status === 403 && response.responseJSON.redirect_url) {
+                    window.location.href = response.responseJSON.redirect_url;
+                } else {
+                    Toast.fire({
+                        icon: 'error',
+                        title: 'Beklenmedik bir hata oluştu.Lütfen yeniden deneyiniz.'
+                    })
+                }
+            }
+        });
+    }
+</script>
+
+<script>
+    function getOrders() {
+        $.ajax({
+            url: "/tr/accounts/get-orders",
+            success: function (data) {
+                $('#orderProducts').html(data);
+                goToTop();
+            },
+            error: function (response) {
+                if (response.status === 403 && response.responseJSON.redirect_url) {
+                    window.location.href = response.responseJSON.redirect_url;
+                } else {
+                    Toast.fire({
+                        icon: 'error',
+                        title: 'Beklenmedik bir hata oluştu.Lütfen yeniden deneyiniz.'
+                    })
+                }
+            }
+        });
+    }
+</script>
+
+<script>
+    function getReturns() {
+        $.ajax({
+            url: "/tr/accounts/get-returns",
+            success: function (data) {
+                $('#returnedProducts').html(data);
+                goToTop();
+            },
+            error: function (response) {
+                if (response.status === 403 && response.responseJSON.redirect_url) {
+                    window.location.href = response.responseJSON.redirect_url;
+                } else {
+                    Toast.fire({
+                        icon: 'error',
+                        title: 'Beklenmedik bir hata oluştu.Lütfen yeniden deneyiniz.'
+                    })
+                }
+            }
+        });
+    }
+</script>
+
+<script>
+    function getUnCommented() {
+        $.ajax({
+            url: "/tr/accounts/get-uncommented",
+            success: function (data) {
+                $('#productComments').html(data);
+                $('#commentedBtn').removeClass('bg-hoverblue text-white').addClass(
+                    'bg-lightgray text-hoverblue')
+                $('#unCommentedBtn').addClass('bg-hoverblue text-white').removeClass(
+                    'bg-lightgray text-hoverblue')
+                goToTop();
+            },
+            error: function (response) {
+                if (response.status === 403 && response.responseJSON.redirect_url) {
+                    window.location.href = response.responseJSON.redirect_url;
+                } else {
+                    Toast.fire({
+                        icon: 'error',
+                        title: 'Beklenmedik bir hata oluştu.Lütfen yeniden deneyiniz.'
+                    })
+                }
+            }
+        });
+    }
+</script>
+
+<script>
+    function getCommented() {
+        $.ajax({
+            url: "/tr/accounts/get-commented",
+            success: function (data) {
+                $('#productComments').html(data);
+                $('#commentedBtn').addClass('bg-hoverblue text-white').removeClass(
+                    'bg-lightgray text-hoverblue')
+                $('#unCommentedBtn').removeClass('bg-hoverblue text-white').addClass(
+                    'bg-lightgray text-hoverblue')
+                goToTop();
+            },
+            error: function (response) {
+                if (response.status === 403 && response.responseJSON.redirect_url) {
+                    window.location.href = response.responseJSON.redirect_url;
+                } else {
+                    Toast.fire({
+                        icon: 'error',
+                        title: 'Beklenmedik bir hata oluştu.Lütfen yeniden deneyiniz.'
+                    })
+                }
+            }
+        });
+    }
+</script>
+
+<script>
+    function getFavorites() {
+        $.ajax({
+            url: "/tr/accounts/get-favorites",
+            success: function (data) {
+                $('#favoriteProducts').html(data);                
+                goToTop();
+            },
+            error: function (response) {
+                if (response.status === 403 && response.responseJSON.redirect_url) {
+                    window.location.href = response.responseJSON.redirect_url;
+                } else {
+                    Toast.fire({
+                        icon: 'error',
+                        title: 'Beklenmedik bir hata oluştu.Lütfen yeniden deneyiniz.'
+                    })
+                }
+            }
+        });
+    }
+</script>
+
+
+    <script src="{% static 'cdn.baykarmagaza.com/staticv2/js/main.js' %}"></script>
+
+    <script>
+        const productData = [
+    {
+        "id": 16,
+        "name": "G\u0130Y\u0130M",
+        "subCategory": [
+            {
+                "id": 100,
+                "name": "Bayraktar AKINCI Ti\u015f\u00f6rt",
+                "products": [
+                    {
+                        "id": 166,
+                        "name": "Bayraktar AKINCI POLO YAKA Ti\u015f\u00f6rt",
+                        "price": "350.00",
+                        "attributes": [
+                            {
+                                "id": 106,
+                                "text": "XS",
+                                "total": 102
+                            },
+                            {
+                                "id": 107,
+                                "text": "S",
+                                "total": 110
+                            },
+                            {
+                                "id": 108,
+                                "text": "M",
+                                "total": 165
+                            },
+                            {
+                                "id": 109,
+                                "text": "L",
+                                "total": 400
+                            },
+                            {
+                                "id": 110,
+                                "text": "XL",
+                                "total": 147
+                            },
+                            {
+                                "id": 111,
+                                "text": "XXL",
+                                "total": 141
+                            },
+                            {
+                                "id": 112,
+                                "text": "3XL",
+                                "total": 68
+                            },
+                            {
+                                "id": 113,
+                                "text": "4XL",
+                                "total": 47
+                            }
+                        ],
+                        "images": [
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/uploads/2024/05/04/wJSWIqtVI9pY8ZO1GD9fmmbJpnlpCNWK.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/uploads/2024/05/04/wJSWIqtVI9pY8ZO1GD9fmmbJpnlpCNWK.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/EqoLgWz89VWap9vb3itoouFPn2tr6Qm2.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/EqoLgWz89VWap9vb3itoouFPn2tr6Qm2.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/uKMzHV42lyxyCFsAeTWSxMa6Hi3Z1Xxs.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/uKMzHV42lyxyCFsAeTWSxMa6Hi3Z1Xxs.jpg"
+                            }
+                        ],
+                        "get_absolute_url": "/tr/product/detail/bayraktar-akinci-polo-yaka-tisort"
+                    },
+                    {
+                        "id": 102,
+                        "name": "Bayraktar AKINCI Siyah Ti\u015f\u00f6rt",
+                        "price": "300.00",
+                        "attributes": [
+                            {
+                                "id": 114,
+                                "text": "S",
+                                "total": 110
+                            },
+                            {
+                                "id": 115,
+                                "text": "M",
+                                "total": 192
+                            },
+                            {
+                                "id": 116,
+                                "text": "L",
+                                "total": 209
+                            },
+                            {
+                                "id": 117,
+                                "text": "XL",
+                                "total": 101
+                            },
+                            {
+                                "id": 118,
+                                "text": "XXL",
+                                "total": 147
+                            }
+                        ],
+                        "images": [
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/2oeo99GDwZ3cPOPUY2DoZfIq2XLil17w.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/2oeo99GDwZ3cPOPUY2DoZfIq2XLil17w.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/1b2f40VuBqYKQM0Vyd5Il16PCyeWbAC3.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/1b2f40VuBqYKQM0Vyd5Il16PCyeWbAC3.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/muC5OReGH8ym2lonEdZGT94B9siPVyrs.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/muC5OReGH8ym2lonEdZGT94B9siPVyrs.jpg"
+                            }
+                        ],
+                        "get_absolute_url": "/tr/product/detail/bayraktar-akinci-siyah-tisort"
+                    },
+                    {
+                        "id": 101,
+                        "name": "Bayraktar AKINCI Beyaz Ti\u015f\u00f6rt",
+                        "price": "250.00",
+                        "attributes": [
+                            {
+                                "id": 100,
+                                "text": "S",
+                                "total": 69
+                            },
+                            {
+                                "id": 101,
+                                "text": "M",
+                                "total": 168
+                            },
+                            {
+                                "id": 102,
+                                "text": "L",
+                                "total": 153
+                            },
+                            {
+                                "id": 103,
+                                "text": "XL",
+                                "total": 79
+                            },
+                            {
+                                "id": 104,
+                                "text": "XXL",
+                                "total": 190
+                            },
+                            {
+                                "id": 105,
+                                "text": "3XL",
+                                "total": 68
+                            }
+                        ],
+                        "images": [
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/CUciIR9i4O2Dw4TAaC1bCmo8gwJWGbZI.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/CUciIR9i4O2Dw4TAaC1bCmo8gwJWGbZI.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/XK43PB5Hp7Zl5IkXm3hmssMBmxM4FfWs.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/XK43PB5Hp7Zl5IkXm3hmssMBmxM4FfWs.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/86WcckDjvL9muNalryWn2EtNmG5gnsba.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/86WcckDjvL9muNalryWn2EtNmG5gnsba.jpg"
+                            }
+                        ],
+                        "get_absolute_url": "/tr/product/detail/bayraktar-akinci-beyaz-tisort"
+                    }
+                ]
+            },
+            {
+                "id": 101,
+                "name": "Bayraktar TB2 Ti\u015f\u00f6rt",
+                "products": [
+                    {
+                        "id": 103,
+                        "name": "Bayraktar TB2 Beyaz Ti\u015f\u00f6rt",
+                        "price": "250.00",
+                        "attributes": [
+                            {
+                                "id": 135,
+                                "text": "S",
+                                "total": 118
+                            },
+                            {
+                                "id": 136,
+                                "text": "M",
+                                "total": 167
+                            },
+                            {
+                                "id": 44,
+                                "text": "L",
+                                "total": 186
+                            },
+                            {
+                                "id": 45,
+                                "text": "XL",
+                                "total": 105
+                            },
+                            {
+                                "id": 46,
+                                "text": "2XL",
+                                "total": 191
+                            },
+                            {
+                                "id": 47,
+                                "text": "3XL",
+                                "total": 28
+                            }
+                        ],
+                        "images": [
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/OLmlpjHyVkdWU6VCdZOCgQMhQwvxzUtR.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/OLmlpjHyVkdWU6VCdZOCgQMhQwvxzUtR.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/PDDM5SSSH0MkmmiHOBoeSDTM5h4K00yN.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/PDDM5SSSH0MkmmiHOBoeSDTM5h4K00yN.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/vDxB3VjsvQUewj9ZcJBCn45fWbTO3cYk.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/vDxB3VjsvQUewj9ZcJBCn45fWbTO3cYk.jpg"
+                            }
+                        ],
+                        "get_absolute_url": "/tr/product/detail/bayraktar-tb2-beyaz-tisort"
+                    }
+                ]
+            },
+            {
+                "id": 102,
+                "name": "Cezeri U\u00e7an Araba Ti\u015f\u00f6rt",
+                "products": [
+                    {
+                        "id": 104,
+                        "name": "Cezeri U\u00e7an Araba Beyaz Ti\u015f\u00f6rt",
+                        "price": "250.00",
+                        "attributes": [
+                            {
+                                "id": 133,
+                                "text": "S",
+                                "total": 398
+                            },
+                            {
+                                "id": 134,
+                                "text": "M",
+                                "total": 394
+                            },
+                            {
+                                "id": 40,
+                                "text": "L",
+                                "total": 428
+                            },
+                            {
+                                "id": 41,
+                                "text": "XL",
+                                "total": 374
+                            },
+                            {
+                                "id": 42,
+                                "text": "2XL",
+                                "total": 333
+                            },
+                            {
+                                "id": 43,
+                                "text": "3XL",
+                                "total": 198
+                            }
+                        ],
+                        "images": [
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/7uepUoaDaJYBpJxlkSXxv18fTWDjkM1K.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/7uepUoaDaJYBpJxlkSXxv18fTWDjkM1K.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/waWCObj66azbtxtMmAqeWz6i6FNSu6fp.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/waWCObj66azbtxtMmAqeWz6i6FNSu6fp.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/iYf3Rc3lR15AmuhN3h5zCypfzM6pXjq4.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/iYf3Rc3lR15AmuhN3h5zCypfzM6pXjq4.jpg"
+                            }
+                        ],
+                        "get_absolute_url": "/tr/product/detail/cezeri-ucan-araba-beyaz-tisort"
+                    }
+                ]
+            },
+            {
+                "id": 169,
+                "name": "Bayraktar AKINCI Beyaz Ekip Ti\u015f\u00f6rt",
+                "products": [
+                    {
+                        "id": 206,
+                        "name": "Bayraktar AKINCI Beyaz Ekip Ti\u015f\u00f6rt",
+                        "price": "250.00",
+                        "attributes": [
+                            {
+                                "id": 174,
+                                "text": "S",
+                                "total": 90
+                            },
+                            {
+                                "id": 175,
+                                "text": "M",
+                                "total": 160
+                            },
+                            {
+                                "id": 176,
+                                "text": "L",
+                                "total": 148
+                            },
+                            {
+                                "id": 177,
+                                "text": "XL",
+                                "total": 191
+                            },
+                            {
+                                "id": 178,
+                                "text": "2XL",
+                                "total": 64
+                            },
+                            {
+                                "id": 179,
+                                "text": "3XL",
+                                "total": 32
+                            }
+                        ],
+                        "images": [
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/AjsRff1DJilM1Z2J8A38muxNRgRV6Awc.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/AjsRff1DJilM1Z2J8A38muxNRgRV6Awc.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/l00R8WuhjB9jjMIMPRCEHttuUCrUbEKk.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/l00R8WuhjB9jjMIMPRCEHttuUCrUbEKk.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/3TD0TPXwY39dmpvpEMqcMiowGZErw8tM.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/3TD0TPXwY39dmpvpEMqcMiowGZErw8tM.jpg"
+                            }
+                        ],
+                        "get_absolute_url": "/tr/product/detail/bayraktar-aknc-beyaz-ekip-tisort"
+                    }
+                ]
+            },
+            {
+                "id": 176,
+                "name": "Bayraktar KIZILELMA Ti\u015f\u00f6rt",
+                "products": [
+                    {
+                        "id": 259,
+                        "name": "Bayraktar KIZILELMA K\u00f6klerden G\u00f6klere Siyah Ti\u015f\u00f6rt",
+                        "price": "300.00",
+                        "attributes": [
+                            {
+                                "id": 205,
+                                "text": "XS",
+                                "total": 141
+                            },
+                            {
+                                "id": 206,
+                                "text": "S",
+                                "total": 506
+                            },
+                            {
+                                "id": 207,
+                                "text": "M",
+                                "total": 642
+                            },
+                            {
+                                "id": 208,
+                                "text": "L",
+                                "total": 389
+                            },
+                            {
+                                "id": 209,
+                                "text": "XL",
+                                "total": 73
+                            },
+                            {
+                                "id": 210,
+                                "text": "XXL",
+                                "total": 31
+                            }
+                        ],
+                        "images": [
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/rJmMGDndoQTWrwJyOYF8Qr158SQFQGl4.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/rJmMGDndoQTWrwJyOYF8Qr158SQFQGl4.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/tCFjSOzxO6xxHnPkY0cynmPuOjC2rjzL.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/tCFjSOzxO6xxHnPkY0cynmPuOjC2rjzL.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/eBnqIPJ78pnOCSfunMPQAFcB4RtwvPgJ.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/eBnqIPJ78pnOCSfunMPQAFcB4RtwvPgJ.jpg"
+                            }
+                        ],
+                        "get_absolute_url": "/tr/product/detail/bayraktar-kizilelma-koklerden-goklere-siyah-tisort"
+                    },
+                    {
+                        "id": 260,
+                        "name": "Bayraktar KIZILELMA Siyah Ti\u015f\u00f6rt",
+                        "price": "300.00",
+                        "attributes": [
+                            {
+                                "id": 212,
+                                "text": "XS",
+                                "total": 99
+                            },
+                            {
+                                "id": 213,
+                                "text": "S",
+                                "total": 360
+                            },
+                            {
+                                "id": 214,
+                                "text": "M",
+                                "total": 369
+                            },
+                            {
+                                "id": 215,
+                                "text": "L",
+                                "total": 172
+                            }
+                        ],
+                        "images": [
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/M7VGg5CY3HZo3qBc5CbIODwTQdCOinjf.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/M7VGg5CY3HZo3qBc5CbIODwTQdCOinjf.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/b8Ijv9wR3QvGEDHQiVP4lu4GADQjGx2Q.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/b8Ijv9wR3QvGEDHQiVP4lu4GADQjGx2Q.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/Oa9yZKlPMUbnewASv4J0scmHH8BYIrq9.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/Oa9yZKlPMUbnewASv4J0scmHH8BYIrq9.jpg"
+                            }
+                        ],
+                        "get_absolute_url": "/tr/product/detail/bayraktar-kizilelma-siyah-tisort"
+                    },
+                    {
+                        "id": 261,
+                        "name": "Bayraktar KIZILELMA Kol U\u00e7u\u015fu Ekru Ti\u015f\u00f6rt",
+                        "price": "300.00",
+                        "attributes": [
+                            {
+                                "id": 219,
+                                "text": "XS",
+                                "total": 140
+                            },
+                            {
+                                "id": 220,
+                                "text": "S",
+                                "total": 545
+                            },
+                            {
+                                "id": 221,
+                                "text": "M",
+                                "total": 689
+                            },
+                            {
+                                "id": 222,
+                                "text": "L",
+                                "total": 459
+                            },
+                            {
+                                "id": 223,
+                                "text": "XL",
+                                "total": 103
+                            }
+                        ],
+                        "images": [
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/fWHkwwKOlm9O95Pm1XyyFUdQC5PHoWfi.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/fWHkwwKOlm9O95Pm1XyyFUdQC5PHoWfi.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/jRi4cCHnVh4G5nAng84g1vcpS58fDmBX.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/jRi4cCHnVh4G5nAng84g1vcpS58fDmBX.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/Mn1KYO5di2t1FXUMYtl2QY4IMnui9qHe.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/Mn1KYO5di2t1FXUMYtl2QY4IMnui9qHe.jpg"
+                            }
+                        ],
+                        "get_absolute_url": "/tr/product/detail/bayraktar-kizilelma-kol-ucusu-ekru-tisort"
+                    },
+                    {
+                        "id": 262,
+                        "name": "Bayraktar KIZILELMA Ekru Ti\u015f\u00f6rt",
+                        "price": "300.00",
+                        "attributes": [
+                            {
+                                "id": 226,
+                                "text": "XS",
+                                "total": 206
+                            },
+                            {
+                                "id": 227,
+                                "text": "S",
+                                "total": 501
+                            },
+                            {
+                                "id": 228,
+                                "text": "M",
+                                "total": 637
+                            },
+                            {
+                                "id": 229,
+                                "text": "L",
+                                "total": 443
+                            },
+                            {
+                                "id": 230,
+                                "text": "XL",
+                                "total": 50
+                            },
+                            {
+                                "id": 231,
+                                "text": "XXL",
+                                "total": 60
+                            }
+                        ],
+                        "images": [
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/dZIrqykbsiRI5mxWyt19gi6wC5n6rgrB.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/dZIrqykbsiRI5mxWyt19gi6wC5n6rgrB.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/0X70bFD5kWLt25q2m2cnRIIX9OQRj6jk.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/0X70bFD5kWLt25q2m2cnRIIX9OQRj6jk.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/j8JO1uPk98KInFSj9ojytEH2QxIeaRBU.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/j8JO1uPk98KInFSj9ojytEH2QxIeaRBU.jpg"
+                            }
+                        ],
+                        "get_absolute_url": "/tr/product/detail/bayraktar-kizilelma-ekru-tisort"
+                    }
+                ]
+            },
+            {
+                "id": 168,
+                "name": "Mini \u0130HA Ti\u015f\u00f6rt",
+                "products": [
+                    {
+                        "id": 205,
+                        "name": "Mini \u0130HA Ye\u015fil Ti\u015f\u00f6rt",
+                        "price": "250.00",
+                        "attributes": [
+                            {
+                                "id": 168,
+                                "text": "S",
+                                "total": 79
+                            },
+                            {
+                                "id": 169,
+                                "text": "M",
+                                "total": 102
+                            },
+                            {
+                                "id": 170,
+                                "text": "L",
+                                "total": 64
+                            },
+                            {
+                                "id": 171,
+                                "text": "XL",
+                                "total": 133
+                            },
+                            {
+                                "id": 172,
+                                "text": "2XL",
+                                "total": 59
+                            },
+                            {
+                                "id": 173,
+                                "text": "3XL",
+                                "total": 14
+                            }
+                        ],
+                        "images": [
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/DAzX6l5d44Jk0f14clyCtnitTR0Xwtb4.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/DAzX6l5d44Jk0f14clyCtnitTR0Xwtb4.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/6BGM5SCPUiYtUJvSbOzSJdw0i90CHw5r.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/6BGM5SCPUiYtUJvSbOzSJdw0i90CHw5r.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/ZHJUrUUgUKcju0JoA0vP8A5LkTokmtIi.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/ZHJUrUUgUKcju0JoA0vP8A5LkTokmtIi.jpg"
+                            }
+                        ],
+                        "get_absolute_url": "/tr/product/detail/mini-iha-yesil-tisort"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 177,
+        "name": "\u00c7OCUK G\u0130Y\u0130M",
+        "subCategory": [
+            {
+                "id": 186,
+                "name": "Bayraktar AKINCI \u00c7ocuk Ti\u015f\u00f6rt",
+                "products": [
+                    {
+                        "id": 167,
+                        "name": "Bayraktar AKINCI POLO YAKA \u00c7ocuk Ti\u015f\u00f6rt",
+                        "price": "200.00",
+                        "attributes": [
+                            {
+                                "id": 161,
+                                "text": "2-3",
+                                "total": 84
+                            },
+                            {
+                                "id": 121,
+                                "text": "4-5",
+                                "total": 21
+                            },
+                            {
+                                "id": 122,
+                                "text": "6-7",
+                                "total": 34
+                            },
+                            {
+                                "id": 123,
+                                "text": "8-9",
+                                "total": 26
+                            },
+                            {
+                                "id": 124,
+                                "text": "10-11",
+                                "total": 66
+                            },
+                            {
+                                "id": 125,
+                                "text": "12-13",
+                                "total": 32
+                            }
+                        ],
+                        "images": [
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/WFzbSgxOLRHELFmQmkbucspTwHQMC8hM.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/WFzbSgxOLRHELFmQmkbucspTwHQMC8hM.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/yV2p2eeJOeu9kEVzMuFFVevm4TUCdnCO.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/yV2p2eeJOeu9kEVzMuFFVevm4TUCdnCO.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/bEHARGi8pGAkYenP3YLvK5qoqCtpkq0M.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/bEHARGi8pGAkYenP3YLvK5qoqCtpkq0M.jpg"
+                            }
+                        ],
+                        "get_absolute_url": "/tr/product/detail/bayraktar-akinci-polo-yaka-cocuk-tisort"
+                    },
+                    {
+                        "id": 136,
+                        "name": "Bayraktar AKINCI Siyah \u00c7ocuk Ti\u015f\u00f6rt",
+                        "price": "180.00",
+                        "attributes": [
+                            {
+                                "id": 150,
+                                "text": "6-8",
+                                "total": 134
+                            },
+                            {
+                                "id": 151,
+                                "text": "8-10",
+                                "total": 59
+                            },
+                            {
+                                "id": 152,
+                                "text": "10-12",
+                                "total": 103
+                            },
+                            {
+                                "id": 153,
+                                "text": "12-14",
+                                "total": 140
+                            },
+                            {
+                                "id": 154,
+                                "text": "14-16",
+                                "total": 267
+                            }
+                        ],
+                        "images": [
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/KloPsb3omkflI0bRvmN3zcDheQBx8N5k.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/KloPsb3omkflI0bRvmN3zcDheQBx8N5k.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/qJMXQhG6o69uy9O5FapfzwsGeDMzzjAk.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/qJMXQhG6o69uy9O5FapfzwsGeDMzzjAk.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/hLU5NVcArDaQ4KVT07e8XqnRbFwNNwPf.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/hLU5NVcArDaQ4KVT07e8XqnRbFwNNwPf.jpg"
+                            }
+                        ],
+                        "get_absolute_url": "/tr/product/detail/bayraktar-akinci-siyah-cocuk-tisort"
+                    },
+                    {
+                        "id": 133,
+                        "name": "Bayraktar AKINCI Beyaz \u00c7ocuk Ti\u015f\u00f6rt",
+                        "price": "180.00",
+                        "attributes": [
+                            {
+                                "id": 155,
+                                "text": "4-6",
+                                "total": 2
+                            },
+                            {
+                                "id": 156,
+                                "text": "6-8",
+                                "total": 132
+                            },
+                            {
+                                "id": 157,
+                                "text": "8-10",
+                                "total": 173
+                            },
+                            {
+                                "id": 158,
+                                "text": "10-12",
+                                "total": 224
+                            },
+                            {
+                                "id": 159,
+                                "text": "12-14",
+                                "total": 341
+                            },
+                            {
+                                "id": 160,
+                                "text": "14-16",
+                                "total": 307
+                            }
+                        ],
+                        "images": [
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/Ig82fegeAtf1OqhA4h1ka3R6mmgzUyfL.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/Ig82fegeAtf1OqhA4h1ka3R6mmgzUyfL.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/U7fvlNRaUFC7lLSfScl5ePwVgeuZIiPw.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/U7fvlNRaUFC7lLSfScl5ePwVgeuZIiPw.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/tdUPrR9KLAG9LhDVti0WNMEHQCa4DSZS.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/tdUPrR9KLAG9LhDVti0WNMEHQCa4DSZS.jpg"
+                            }
+                        ],
+                        "get_absolute_url": "/tr/product/detail/bayraktar-akinci-beyaz-cocuk-tisort"
+                    }
+                ]
+            },
+            {
+                "id": 187,
+                "name": "Bayraktar TB2 \u00c7ocuk Ti\u015f\u00f6rt",
+                "products": [
+                    {
+                        "id": 135,
+                        "name": "Bayraktar TB2 Beyaz \u00c7ocuk Ti\u015f\u00f6rt",
+                        "price": "180.00",
+                        "attributes": [
+                            {
+                                "id": 143,
+                                "text": "4-6",
+                                "total": 90
+                            },
+                            {
+                                "id": 144,
+                                "text": "6-8",
+                                "total": 299
+                            },
+                            {
+                                "id": 145,
+                                "text": "8-10",
+                                "total": 323
+                            },
+                            {
+                                "id": 146,
+                                "text": "10-12",
+                                "total": 345
+                            },
+                            {
+                                "id": 147,
+                                "text": "12-14",
+                                "total": 371
+                            },
+                            {
+                                "id": 148,
+                                "text": "14-16",
+                                "total": 153
+                            }
+                        ],
+                        "images": [
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/IkOxT8olzc7iytBQTvFwks9WPizRnTr0.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/IkOxT8olzc7iytBQTvFwks9WPizRnTr0.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/zuKczeBN8MbRarGIsyhLJ374Meda4s8u.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/zuKczeBN8MbRarGIsyhLJ374Meda4s8u.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/u20JpSfbo2tk5dpFqM3LDQLHdlEGwCri.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/u20JpSfbo2tk5dpFqM3LDQLHdlEGwCri.jpg"
+                            }
+                        ],
+                        "get_absolute_url": "/tr/product/detail/bayraktar-tb2-beyaz-cocuk-tisort"
+                    }
+                ]
+            },
+            {
+                "id": 183,
+                "name": "Cezeri U\u00e7an Araba \u00c7ocuk Ti\u015f\u00f6rt",
+                "products": [
+                    {
+                        "id": 134,
+                        "name": "Cezeri Beyaz \u00c7ocuk Ti\u015f\u00f6rt",
+                        "price": "180.00",
+                        "attributes": [
+                            {
+                                "id": 138,
+                                "text": "6-8",
+                                "total": 15
+                            },
+                            {
+                                "id": 139,
+                                "text": "8-10",
+                                "total": 118
+                            },
+                            {
+                                "id": 140,
+                                "text": "10-12",
+                                "total": 99
+                            },
+                            {
+                                "id": 141,
+                                "text": "12-14",
+                                "total": 286
+                            },
+                            {
+                                "id": 142,
+                                "text": "14-16",
+                                "total": 330
+                            }
+                        ],
+                        "images": [
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/Osi52NymvlF2PsGc5EXuuXlCxaQezL7d.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/Osi52NymvlF2PsGc5EXuuXlCxaQezL7d.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/jGWChi2gS7HZm0U9AW2SpGg9EDsWltB6.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/jGWChi2gS7HZm0U9AW2SpGg9EDsWltB6.jpg"
+                            },
+                            {
+                                "image": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/OsivqYkvTF4mvGP5STfZNu1U8YFvbrc6.jpg",
+                                "image_url": "https://cdn.baykarmagaza.com/media/upload/userFormUpload/OsivqYkvTF4mvGP5STfZNu1U8YFvbrc6.jpg"
+                            }
+                        ],
+                        "get_absolute_url": "/tr/product/detail/cezeri-beyaz-cocuk-tisort"
+                    }
+                ]
+            }
+        ]
+    }
+]
+    </script>
+
+    <script>
+        let selectedCategory = productData[0]
+        let selectedSubCategory = selectedCategory.subCategory[0];
+        let selectedProduct = selectedSubCategory.products[0];
+        let selectedAttribute = selectedProduct.attributes[0];
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let selectedCategory = productData[0]
+            let selectedSubCategory = selectedCategory.subCategory[0];
+
+            let selectedProduct = selectedSubCategory.products[0];
+            selectedAttribute = selectedProduct.attributes[0];
+            let selectedSubCategoryId = productData.find(k => k.id == selectedCategory.id).subCategory[0].id;
+            const groupButtonsContainer = document.querySelector('.productNavs');
+            productData.forEach((item, index) => {
+                const groupButton = document.createElement("button");
+                groupButton.innerText = item.name;
+                groupButton.id = item.id;
+                groupButton.classList.add('categoryButton', 'text-white', 'border-b-2', 'border-transparent', 'whitespace-nowrap')
+                if (index == 0) {
+                    groupButton.classList.add('border-white')
+                }
+                groupButton.onclick = () => setSelectedCategory(item.id);
+                groupButtonsContainer.appendChild(groupButton)
+            })
+            setActiveTshirt(selectedProduct.id)
+            handleProductsContainer(selectedSubCategory.products)
+        });
+
+        const setSelectedCategory = (id) => {
+            const categoryButtons = document.querySelectorAll('.categoryButton')
+            categoryButtons.forEach(item => {
+                if (item.id == id) {
+                    item.classList.add('border-white')
+                    selectedCategory = productData.find(category => category.id == id)
+                    selectedSubCategory = selectedCategory.subCategory[0];
+                    setSelectedSubCategory(selectedSubCategory.id)
+
+                    defaultProduct = selectedSubCategory.products[0];
+                    setSelectedProduct(defaultProduct.id)
+                } else {
+                    item.classList.remove('border-white')
+                }
+            })
+        }
+
+        const setSelectedSubCategory = (id) => {
+            const categoryContent = document.querySelector(".categoryContent");
+            categoryContent.innerHTML = "";
+            selectedSubCategory = selectedCategory.subCategory.find(k => k.id == id)
+
+            selectedCategory.subCategory.forEach((item, index) => {
+                const button = document.createElement("button");
+                button.innerText = item.name;
+
+                if (item.id == id) {
+                    button.classList.add("font-regular", "tabButton", "text-white", "text-xs", "whitespace-nowrap", "lg:px-5", "lg:py-3", "md:px-4", "lg:py-2", "px-3", "py-1", "border", "border-solid", "border-white", "rounded-lg");
+                } else {
+                    button.classList.add("font-regular", "tabButton", "text-white", "text-xs", "whitespace-nowrap", "lg:px-5", "lg:py-3", "md:px-4", "lg:py-2", "px-3", "py-1", "border", "border-solid", "border-transparent", "rounded-lg", "hover:border-white", "transition-colors", "ease-in", "duration-300");
+                }
+                button.onclick = () => setSelectedSubCategory(item.id);
+                button.dataset.id = item.id;
+                categoryContent.appendChild(button);
+            });
+            handleProductsContainer(selectedSubCategory.products)
+            setSelectedProduct(selectedSubCategory.products[0].id)
+        }
+
+        const categoryContent = document.querySelector(".categoryContent");
+        selectedCategory.subCategory.forEach((item, index) => {
+            const button = document.createElement("button");
+            button.innerText = item.name;
+            if (index == 0) {
+                button.classList.add("font-regular", "tabButton", "text-white", "text-xs", "whitespace-nowrap", "lg:px-5", "lg:py-3", "md:px-4", "lg:py-2", "px-3", "py-1", "border", "border-white", "border-solid", "rounded-lg");
+            } else {
+                button.classList.add("font-regular", "tabButton", "text-white", "text-xs", "whitespace-nowrap", "lg:px-5", "lg:py-3", "md:px-4", "lg:py-2", "px-3", "py-1", "border", "border-solid", "border-transparent", "rounded-lg", "hover:border-white", "transition-colors", "ease-in", "duration-300");
+            }
+            button.onclick = () => setSelectedSubCategory(item.id);
+            button.dataset.id = item.id;
+            categoryContent.appendChild(button);
+        });
+
+        function changeImage(element) {
+            const selectedOption = document.querySelector(".photoOption.selected");
+            if (selectedOption && selectedOption !== element) {
+                selectedOption.classList.remove("selected");
+                selectedOption.classList.remove("border-[#111c4e]");
+                selectedOption.classList.add("border-transparent");
+            }
+            element.classList.add("selected");
+            element.classList.remove("border-transparent");
+            element.classList.add("border-[#111c4e]")
+            const thumbnailImg = document.getElementById("currentThumbnail");
+            const imgSrc = element.querySelector("img").src;
+            thumbnailImg.src = imgSrc;
+        }
+
+        function setActiveTshirt(id) {
+            const tabButtons = document.querySelectorAll(".tabButton");
+
+            const priceItemText = document.getElementById('activeItemPrice')
+            priceItemText.innerText = `${selectedProduct.price} ₺`
+
+            const activeTab = document.querySelector("#activeTab");
+
+            const activeItem = selectedProduct;
+            const currentThumbnail = document.getElementById("currentThumbnail");
+
+            currentThumbnail.src = activeItem.images[0].image;
+            $('#prodDetail').attr('href', selectedProduct.get_absolute_url)
+
+            const photoOptionsContainer = document.querySelector(".smTshirtContent");
+            photoOptionsContainer.innerHTML = "";
+            activeItem.images.forEach((image) => {
+                const photoOption = document.createElement("div");
+                photoOption.classList.add("photoOption", "shrink-0", "flex", "hover:cursor-pointer", "justify-center", "items-center", "w-32", "lg:w-44", "h-24", "p-3", "mr-2", "border-2", "border-transparent", "bg-lightgrayd", "rounded-md");
+                photoOption.onclick = () => changeImage(photoOption);
+                const img = document.createElement("img");
+                img.src = image.image;
+                img.classList.add("h-20", "w-full", "object-contain");
+                img.alt = "";
+                photoOption.appendChild(img);
+                photoOptionsContainer.appendChild(photoOption);
+            });
+            document.querySelectorAll(".photoOption")[0].classList.add("border-2", "border-[#111c4e]");
+            document.querySelectorAll(".photoOption")[0].classList.add("selected");
+        }
+
+        const setSelectedProduct = (productId) => {
+            const variantsScrollContainer = document.getElementById('variantsScrollContainer')
+            const productItems = document.querySelectorAll('#variantsContainer div');
+            const priceTextItem = document.getElementById('activeItemPrice');
+            let prodDetail = $('#prodDetail')
+
+            productItems.forEach((item, index) => {
+                if (item.dataset.id == productId) {
+                    const productIndex = selectedSubCategory.products.findIndex(k => k.id == productId)
+                    selectedProduct = selectedSubCategory.products[productIndex];
+                    setActiveTshirt(productId);
+                    priceTextItem.innerText = `${selectedProduct.price} ₺`
+                    prodDetail.attr('href', selectedProduct.get_absolute_url)
+                    item.setAttribute("class", "shrink-0 bg-white cursor-pointer text-primary border-white border overflow-hidden text-end rounded-lg h-24 flex items-center p-2 justify-start productItem selected")
+                    item.querySelector('img').setAttribute("class", "h-full w-24 transition-all duration-300 object-contain rounded-lg")
+                    item.querySelector('p').setAttribute("class", "font-semibold productTitle   flex-wrap text-left  -right-3 pl-3 pr-px text-xs text-[#333333]")
+                } else {
+                    item.setAttribute("class", "shrink-0 bg-white cursor-pointer bg-opacity-5 border-white border overflow-hidden text-primary text-end rounded-lg h-24 flex items-center justify-start p-2 productItem")
+                    item.querySelector('img').setAttribute("class", "h-full w-24 transition-all duration-300 object-cover rounded-lg")
+                    item.querySelector('p').setAttribute("class", "font-semibold flex-wrap text-left right-0 pl-3 pr-px productTitle text-xs text-[#333333]")
+                }
+            })
+
+            const getAttContainer = document.getElementById('sizesList')
+            getAttContainer.innerHTML = ''
+
+            selectedProduct.attributes.forEach((item, index) => {
+                const newAtt = document.createElement('a')
+                newAtt.id = item.id
+                if (index == 0) {
+                    newAtt.setAttribute('class', 'text-white text-xs border border-white border-solid px-3 py-2.5 rounded-full cursor-pointer')
+                    selectedAttribute = newAtt.id
+                } else {
+                    newAtt.setAttribute('class', 'text-white text-xs border border-transparent rounded-full hover:bg-white hover:text-[#040E3E] transition-colors ease-in duration-300 p-1.5 xs:px-3 xs:py-2.5 cursor-pointer')
+                }
+                newAtt.text = item.text
+                newAtt.onclick = () => setSelectedAttribute(item.id)
+                getAttContainer.appendChild(newAtt)
+            })
+        }
+
+        const setSelectedAttribute = (attId) => {
+            const attrs = document.querySelectorAll("#sizesList a");
+
+            attrs.forEach(attr => {
+                if (attId == attr.id) {
+                    attr.setAttribute('class', 'text-white text-xs border border-white border-solid px-3 py-2.5 rounded-full cursor-pointer')
+                    selectedAttribute = attId
+                } else {
+                    attr.setAttribute('class', 'text-white text-xs border border-transparent rounded-full hover:bg-white hover:text-[#040E3E] transition-colors ease-in duration-300 p-1.5 xs:px-3 xs:py-2.5 cursor-pointer')
+                }
+            })
+        }
+
+        function handleProductsContainer(products) {
+            const productsContainerItems = document.getElementById('variantsContainer')
+            productsContainerItems.innerHTML = "";
+
+            products.forEach((item, index) => {
+                const productItem = document.createElement("div");
+                productItem.dataset.id = item.id;
+                productItem.onclick = () => setSelectedProduct(item.id)
+
+                const imageItem = document.createElement("img");
+                imageItem.src = item.images[0].image
+
+                const textItem = document.createElement("p");
+                textItem.innerText = item.name;
+
+                if (index == 0) {
+                    productItem.setAttribute("class", "shrink-0 bg-white cursor-pointer text-primary border-transparent border overflow-hidden text-end rounded-lg h-24 flex items-center p-2 justify-start productItem selected")
+                    imageItem.setAttribute("class", "h-full w-24 transition-all duration-300 object-contain rounded-lg")
+                    textItem.setAttribute("class", "font-semibold productTitle text-xs text-[#333333]")
+
+                    const getAttContainer = document.getElementById('sizesList')
+                    getAttContainer.innerHTML = ''
+
+                    selectedProduct.attributes.forEach((item, index) => {
+                        const newAtt = document.createElement('a')
+                        newAtt.id = item.id
+                        if (index == 0) {
+                            newAtt.setAttribute('class', 'text-white text-xs border border-white border-solid px-3 py-2.5 rounded-full cursor-pointer')
+                            selectedAttribute = newAtt.id
+                        } else {
+                            newAtt.setAttribute('class', 'text-white text-xs border border-transparent rounded-full hover:bg-white hover:text-[#040E3E] transition-colors ease-in duration-300 p-1.5 xs:px-3 xs:py-2.5 cursor-pointer')
+                        }
+                        newAtt.text = item.text
+                        newAtt.onclick = () => setSelectedAttribute(item.id)
+                        getAttContainer.appendChild(newAtt)
+                    })
+                } else {
+                    productItem.setAttribute("class", "shrink-0 bg-white cursor-pointer bg-opacity-5 border-white border overflow-hidden text-primary text-end rounded-lg h-24 flex items-center justify-start p-2 productItem")
+                    imageItem.setAttribute("class", "h-full w-24 transition-all duration-300 object-cover rounded-lg")
+                    textItem.setAttribute("class", "font-semibold productTitle text-xs text-[#333333]")
+                }
+                productItem.appendChild(imageItem)
+                productItem.appendChild(textItem)
+                productsContainerItems.appendChild(productItem)
+            })
+        }
+    </script>
+
+
+</body>
+</html>
